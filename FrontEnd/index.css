@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Domine:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --primary-color:#003399;
+    --primar-text-color:#0140FF;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+
+body{
+    -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
+}
+header{
+    width: 100vw;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    z-index: 999;
+    transition: background .5s ease-in-out;
+}
+
+header img{
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+}
+
+header img:hover{
+    filter: grayscale(90%);
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-style: bold;
+    color: lightgray;
+    margin: 0px 20px;
+    transition: 0.5s ease ease-in-out;
+    
+    
+}
+
+
+header nav a::after:hover{
+    width: 100%;
+}
+
+header nav a:hover{
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+    
+}
+
+section{
+    height: 100vh;
+ 
+}
+
+.first-container{
+    height: 100vh;
+    background-image:url("/img/samplebg1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-top: -80px;
+    filter: grayscale(40%);
+   
+   
+}
+
+.container-filter{
+    height: 100%;
+    width: 100%;
+    background: black;
+    z-index: 1;
+    opacity: .5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+
+.first-sub-container{
+    width: 100%;
+    height: 100%;
+    z-index: 22;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 100px;
+}
+
+#first-title{
+    display: flex;
+}
+
+#second-title{
+    display: none;
+}
+#first-title, #second-title{
+    display: none;
+    z-index: 22;
+    color: white;
+    font-weight: 600;
+    font-size: 60px;
+    opacity: 1;
+    text-align: start;
+    filter: drop-shadow(0 0 5px black);
+    transition: all .5s;    
+    animation: popUp 1s ease-in-out;
+    user-select: none;
+    
+
+}
+
+@keyframes popUp{
+    0%{
+        transform: translatey(50px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+    
+}
+
+.second-container{
+    
+    display: flex;
+    padding: 50px 100px;
+    opacity: 1;
+    filter: grayscale(0);
+    background-color: white;
+
+}
+
+.left-container{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position: relative;
+
+
+}
+
+#destination{
+    color: var(--primar-text-color);
+    font-weight: 800;
+    font-style: bold;
+}
+
+#destination-title{
+    color: black;
+    font-style: bold;
+    font-weight: 800;
+    font-size: 50px;
+    margin-top: 30px;
+    text-align: start;
+}
+
+#destination-description{
+    color: black;
+    font-size: 1.5rem;
+    text-align: start;
+    margin-top: 20px;
+}
+
+#destination-more-info{
+    color: lightgrey;
+    font-size: 1.5rem;
+    font-style: bold;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    position: absolute;
+    bottom: 0;
+  
+
+}
+
+#destination-more-info:hover{
+    color: gray;
+}
+
+.right-container{
+    flex-basis: 50%;
+}
+.third-container{
+    background-color:blueviolet;
+}
+
+footer{
+    height: 300px;
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    padding: 0 100px;
+}
+footer p{
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding: 50px;
+  
+}
+
+
+.top-container{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.top-left-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+    padding: 20px;
+ 
+   
+
+}
+.logo-content{
+    height: 33.3%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.logo-content img{
+    width: 70px;
+    height: 50px;
+
+    
+}
+.logo-content p{
+    color: white;
+    font-size: 30px;
+    font-weight: 800;
+    font-style: bold;
+    font-family: Domine;
+    text-align: start;
+    margin-left: -40px;
+
+    
+}
+
+.social-media-content{
+    flex: 1;
+    display: flex;
+}
+
+#fb, #insta, #twitter{
+    width: 48px;
+    height: 44px;
+    margin: 10px;
+    border-radius: 50%;
+}
+
+#fb{
+    background-image: url("/img/fblogo.svg");
+}
+#insta{
+    background-image: url("/img/iglogo.svg");
+}
+#twitter{
+    background-image: url("/img/twitterlogo.svg");
+}
+
+#fb:hover{
+    background-image: url("/img/fblogohover.svg");
+}
+#insta:hover{
+    background-image: url("/img/iglogohover.svg");
+}
+#twitter:hover{
+    background-image: url("/img/twitterlogohover.svg");
+}
+
+#fb{
+    margin-left: 0;
+}
+
+.rules-content{
+    flex: 1;
+    height: 33.3%;
+    display: flex;
+    flex-direction: column;
+}
+
+.rules-content a{
+    color: gray;
+    text-decoration: none;
+    font-style: bold;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+
+.rules-content a:hover{
+    color: white;
+}
+.top-middle-container{
+    flex: 1;
+    padding: 20px;
+}
+.top-middle-container h1, .top-middle-container a{
+    color: white;
+}
+
+.top-middle-container h1{
+    margin-top: 20px;
+}
+
+.top-middle-container a{
+    text-decoration: none;
+}
+
+
+.top-right-container{
+    flex: 1;
+    padding: 20px;
+    color: white;
+    margin-top: 20px;
+}
+.top-right-container p{
+    padding: 0;
+   
+}
