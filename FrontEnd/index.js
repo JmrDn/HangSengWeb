@@ -1,6 +1,7 @@
 const header = document.querySelector('header');
 const logo = document.querySelector('header img');
 
+
 logo.addEventListener('click', function(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
 })
@@ -31,12 +32,11 @@ window.addEventListener('scroll', function() {
   firstTitleValue.style.display = 'flex';
   secondTitleValue.style.disply = 'none';
 
+ 
 
   function changeTextFirstValue(){
     firstTitleValue.style.display = 'flex';
     secondTitleValue.style.display = "none";
-
-
   }
 
   function changeTextSecondValue(){
@@ -47,3 +47,59 @@ window.addEventListener('scroll', function() {
 
   window.setInterval(changeTextFirstValue, 4000);
   window.setInterval(changeTextSecondValue, 8000);
+
+
+//Section 2
+let isDown = false;
+let startX;
+let scrollLeft;
+
+document.querySelector('.content-container').addEventListener('mousedown', (e) => {
+    isDown = true;
+    startX = e.pageX - document.querySelector('.content-container').offsetLeft;
+    scrollLeft = document.querySelector('.content-container').scrollLeft;
+});
+
+document.querySelector('.content-container').addEventListener('mouseleave', () => {
+    isDown = false;
+});
+
+document.querySelector('.content-container').addEventListener('mouseup', () => {
+    isDown = false;
+});
+
+document.querySelector('.content-container').addEventListener('mousemove', (e) => {
+    if (!isDown) return;
+    e.preventDefault();
+    const x = e.pageX - document.querySelector('.content-container').offsetLeft;
+    const walk = (x - startX) * 3; // Adjust this multiplier for desired drag speed
+    document.querySelector('.content-container').scrollLeft = scrollLeft - walk;
+});
+
+//Section 3
+
+let isDownS3 = false;
+let startXS3;
+let scrollLeftS3;
+
+document.querySelector('.news-and-events-container').addEventListener('mousedown', (e) => {
+    isDownS3 = true;
+    startXS3 = e.pageX - document.querySelector('.news-and-events-container').offsetLeft;
+    scrollLeftS3 = document.querySelector('.news-and-events-container').scrollLeft;
+});
+
+document.querySelector('.news-and-events-container').addEventListener('mouseleave', () => {
+    isDownS3 = false;
+});
+
+document.querySelector('.news-and-events-container').addEventListener('mouseup', () => {
+    isDownS3 = false;
+});
+
+document.querySelector('.news-and-events-container').addEventListener('mousemove', (e) => {
+    if (!isDownS3) return;
+    e.preventDefault();
+    const x = e.pageX - document.querySelector('.news-and-events-container').offsetLeft;
+    const walk = (x - startXS3) * 3; // Adjust this multiplier for desired drag speed
+    document.querySelector(' .news-and-events-container').scrollLeft = scrollLeftS3 - walk;
+});
