@@ -1,18 +1,206 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Domine:wght@400..700&family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+:root{
+    --primary-color:#003399;
+    --primar-text-color:#0140FF;
+    --sold-bg-color:#990000;
+}
+
 *{
-    padding: 0;
+    padding:0;
     margin: 0;
     box-sizing: border-box;
+    font-family: "DM Sans", sans-serif;
+}
+body{
+    scroll-behavior: smooth;
+    -ms-overflow-style: none; /* Internet Explorer/Edge */
+}
+body::-webkit-scrollbar {
+    display: none; /* Chrome/Safari/Opera */
 }
 
-body{
+header{
+    width: 100vw;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    left: 0;
+    background-color: var(--primary-color);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 100px;
+    z-index: 999;
+    transition: background .5s ease-in-out;
+}
+
+header img{
+    width: 70px;
+    height: 50px;
+    cursor: pointer;
+}
+
+header img:hover{
+    filter: grayscale(90%);
+}
+
+header nav a {
+    text-decoration: none;
+    font-weight: 600;
+    font-style: bold;
+    color: lightgray;
+    margin: 0px 20px;
+    transition: 0.5s ease ease-in-out;
+    
+    
+}
+
+
+header nav a::after:hover{
+    width: 100%;
+}
+
+header nav a:hover{
+    color: white;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 5px;
+    
+}
+
+.navigation-active {
+    padding-top:25px ;
+    border-top: 5px solid white;
+    color: white;
+    transition: border-top 1s ease-in-out;
+
+}
+
+section{
     height: 100vh;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    padding: 20px 100px;
 }
 
-img{
-   
-    width: 600px;
-    height: 400px;
+.panel-title-container{
+    padding: 20px 0px;
+    
 }
+
+.panel-title-container .line{
+    width: 150px;
+    height: 5px;
+    background-color: var(--primar-text-color);
+}
+
+.list-of-properties-container{
+   
+    padding: 20px 0px;
+    display: grid;
+    grid-template-rows: repeat(4, 470px);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    gap: 25px;
+}
+
+.item{
+    background-color: white;
+    position: relative;
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+   
+   
+}
+
+.item .sale-container, .item .sold-container{
+    width: auto;
+    height: auto;
+    padding: 15px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    border-radius: 10px;
+    z-index: 1;
+}
+
+.item .sold-container{
+    background-color: var(--sold-bg-color);
+}
+
+.item .content-container{
+    padding: 10px 20px;
+    position: relative;
+}
+
+.item .img-container{
+    overflow: hidden;
+   
+}
+.item img{
+    width: 100%;
+    height: 50%;
+    transition: transform 1s ease-in-out;
+    
+}
+
+.item:hover img{
+    transform: scale(1.2);
+    
+}
+
+.item .property-name{
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.item .line{
+    width: 100%;
+    background-color: gray;
+    height: .5px;
+}
+
+
+
+.property-price {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+  
+}
+.item .property-name,.item .property-price{
+    padding: 10px 0px;
+    
+}
+
+.item .features{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    
+
+}
+
+.item .features .beds-container,
+ .item .features .baths-container{
+    display: flex;
+    align-items: center;
+ } 
+
+ .item .features .baths-container{
+    margin-left: 20px;
+ }
+
+ .item .features .beds-container p,
+ .item .features .baths-container p{
+    margin-left: 20px;
+    font-weight: 400px;
+    font-size: 1.1rem;
+ }
+
+
+
+

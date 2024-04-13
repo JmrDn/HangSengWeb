@@ -6,6 +6,7 @@ logo.addEventListener('click', function(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
 })
 
+
 window.addEventListener('scroll', function() {
     var section2 = document.getElementById('second');
     var section3 = document.getElementById('third');
