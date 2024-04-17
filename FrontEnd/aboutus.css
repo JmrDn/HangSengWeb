@@ -130,7 +130,6 @@ section{
     height: auto;
     margin-top: -180px;
     margin-bottom: 50px;
-    z-index: 999;
     border-radius: 10px;
     box-shadow: 0 0 2px black;
     color: black;
@@ -157,4 +156,29 @@ section{
 
 #second, #third{
     margin-top: 50px;
+}
+
+#second-sub-title{
+    margin-top: 20px;
+}
+
+.content-container .mission-and-vision-container{
+    display: flex;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.content-container .mission-and-vision-container .mission-container,
+.content-container .mission-and-vision-container .vision-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+}
+
+.content-container .mission-and-vision-container .line{
+    width: 100%;
+    background-color: lightgray;
+    height: .2px;
+    margin-top: 10px;
 }
