@@ -280,19 +280,14 @@ section{
     display: flex;
     flex-direction: column;
     color: white;
- 
+
     
-  
 }
 
-<<<<<<< HEAD:FrontEnd/index.css
-=======
 .right-container .content-container .content-one{
     background-image: url("../img/img1.jpg") ;
     position: relative;
->>>>>>> 53ca0e6f2c2aea8255f34403c5e978fc41bed4f6:Assets/css/index.css
-
-
+}
 .right-container .content-container .content-one .content-one-details,
 .right-container .content-container .content-two .content-two-details,
 .right-container .content-container .content-three .content-three-details,
@@ -310,7 +305,7 @@ section{
 .right-container .content-container .content-five .content-five-details h1{
     font-size: 35px;
     filter: drop-shadow(0 0 .5px black);
-  
+
 }
 
 
@@ -320,7 +315,7 @@ section{
 .right-container .content-container .content-four .content-four-details h3 ,
 .right-container .content-container .content-five .content-five-details h3 {
     color: white;
- 
+
 }
 
 .right-container .content-container .content-one .content-one-details h3,
@@ -332,7 +327,7 @@ section{
 }
 
 .right-container .content-container .content-one{
-    background-image: url("/img/MVUNITB.jpeg") ;
+    background-image: url("../img/MVUNITB.jpeg") ;
     position: relative;
 
 }
@@ -342,11 +337,7 @@ section{
 }
 
 .right-container .content-container .content-three{
-<<<<<<< HEAD:FrontEnd/index.css
-    background-image: url("/img/FRACERPLACE.png");
-=======
-    background-image: url("../img/img3.jpg");
->>>>>>> 53ca0e6f2c2aea8255f34403c5e978fc41bed4f6:Assets/css/index.css
+    background-image: url("../img/FRACERPLACE.png");
     position: relative;
 }
 
@@ -635,4 +626,3 @@ footer{
     margin-left: 10px;
     color: gray;
 }
-

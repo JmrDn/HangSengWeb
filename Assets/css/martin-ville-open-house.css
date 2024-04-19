@@ -80,7 +80,7 @@ header nav a:hover{
 
 .article-header-container{
     height: 600px;
-    background-image: url("/img/martinvileopenhouseheaderimg.jpeg");
+    background-image: url("../img/martinvileopenhouseheaderimg.jpeg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -182,5 +182,8 @@ header nav a:hover{
     height: 90%;
 }
 .article-content-container .context-container .third-container img{
+    height: 90%;
+}
+.article-content-container .context-container .fourth-container img{
     height: 90%;
 }
