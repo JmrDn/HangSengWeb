@@ -79,7 +79,7 @@ section{
 }
 
 .first-container{
-    background-image: url(/img/img1.jpg);
+    background-image: url(../img/img1.jpg);
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
@@ -90,22 +90,22 @@ section{
 
 @keyframes changeBackgroundImage {
     0%{
-        background-image: url(/img/img1.jpg);
+        background-image: url(../img/img1.jpg);
     }
     20%{
-        background-image: url(/img/img2.jpg);
+        background-image: url(../img/img2.jpg);
     }
     40%{
-        background-image: url(/img/img3.jpg);
+        background-image: url(../img/img3.jpg);
     }
     60%{
-        background-image: url(/img/img4.jpg);
+        background-image: url(../img/img4.jpg);
     }
     80%{
-        background-image: url(/img/img5.jpg);
+        background-image: url(../img/img5.jpg);
     }
     100%{
-        background-image: url(/img/img1.jpg);
+        background-image: url(../img/img1.jpg);
     }
 }
 
@@ -285,6 +285,12 @@ section{
   
 }
 
+<<<<<<< HEAD:FrontEnd/index.css
+=======
+.right-container .content-container .content-one{
+    background-image: url("../img/img1.jpg") ;
+    position: relative;
+>>>>>>> 53ca0e6f2c2aea8255f34403c5e978fc41bed4f6:Assets/css/index.css
 
 
 .right-container .content-container .content-one .content-one-details,
@@ -331,22 +337,26 @@ section{
 
 }
 .right-container .content-container .content-two{
-    background-image: url("/img/img2.jpg");
+    background-image: url("../img/img2.jpg");
     position: relative;
 }
 
 .right-container .content-container .content-three{
+<<<<<<< HEAD:FrontEnd/index.css
     background-image: url("/img/FRACERPLACE.png");
+=======
+    background-image: url("../img/img3.jpg");
+>>>>>>> 53ca0e6f2c2aea8255f34403c5e978fc41bed4f6:Assets/css/index.css
     position: relative;
 }
 
 .right-container .content-container .content-four{
-    background-image: url("/img/img4.jpg");
+    background-image: url("../img/img4.jpg");
     position: relative;
 }
 
 .right-container .content-container .content-five{
-    background-image: url("/img/img5.jpg");
+    background-image: url("../img/img5.jpg");
     position: relative;
 }
 
@@ -588,10 +598,6 @@ footer{
     text-decoration: none;
     
 }
-#about-us{
-    
-}
-
 
 .top-right-container{
     flex: 1;
@@ -603,7 +609,7 @@ footer{
 .top-right-container p{
     padding: 0;
     margin-top: 5px;
-   
+
 }
 .top-right-container .our-offices {
     display: flex;
