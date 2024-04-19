@@ -147,7 +147,6 @@ section{
     width: 150px;
     height: 4px;
     background-color: var(--primar-text-color);
-  
 }
 
 .content-container p{
@@ -181,4 +180,48 @@ section{
     background-color: lightgray;
     height: .2px;
     margin-top: 10px;
+}
+/*=====================================
+PROFILES STYLES 
+===================================*/
+#profile-sec {
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.profile-div {
+    padding: 30px;
+    text-align: center;
+}
+
+.profile-div hr {
+    border: 1px solid lightgrey;
+}
+
+.profile-div h4{
+    padding-top: 5px;
+}
+
+.profile-div h3 {
+    font-size: 25px;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding-top: 15px;
+    margin-bottom: 10px;
+}
+
+.profile-div p {
+    padding-top: 15px;
+    padding-bottom: 10px;
+}
+
+.profile-div img {
+    border: 10px double #000;
+}
+
+@media (min-width: 768px) {
+    .profile-div {
+        float: left;
+        width: 50%;
+    }
 }
