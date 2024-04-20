@@ -280,13 +280,108 @@ section{
     display: flex;
     flex-direction: column;
     color: white;
-
-    
+   
 }
 
+
+
 .right-container .content-container .content-one{
-    background-image: url("../img/img1.jpg") ;
     position: relative;
+}
+
+
+
+
+.right-container .content-container .content-one .image-container{
+    background-image: url("../img/MVUNITB.jpeg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    transition: filter .5s ease-in-out;
+   
+}
+
+.right-container .content-container .content-two .image-container{
+    background-image: url("../img/img2.jpg") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    transition: filter .5s ease-in-out;
+   
+}
+
+.right-container .content-container .content-three .image-container{
+    background-image: url("../img/FRACERPLACE.png") ;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 100%;
+    transition: filter .5s ease-in-out;
+   
+}
+
+
+
+.second-container .right-container .content-container .item:hover .image-container{
+    filter: brightness(.3);
+}
+
+.second-container .right-container .content-container .item:hover .content{
+    width: 100%;
+}
+
+.second-container .right-container .content-container .item:hover .content .details-container{
+    display: none;
+}
+
+.second-container .right-container .content-container .item .content .hover-details-container{
+    width: 100%;
+    position: absolute;
+    bottom: 50px;
+    left: 0;
+    display: none;
+    animation: slideUp .8s ease-in-out;
+}
+
+@keyframes slideUp{
+    0%{
+        transform: translateY(100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+.second-container .right-container .content-container .item .content .hover-details-container p{
+    margin-bottom: 20px;
+   
+}
+
+.second-container .right-container .content-container .item:hover .content .hover-details-container{
+    display: flex;
+    flex-direction: column;
+}
+
+.second-container .right-container .content-container .item .content .hover-details-container .unit{
+    margin-bottom: 20px;
+}
+
+.second-container .right-container .content-container .item .content .hover-details-container .unit:hover{
+   color: var(--primary-color);
+}
+.second-container .right-container .content-container .item .content .hover-details-container .unit:hover svg path{
+    fill: var(--primary-color);
+}
+
+.second-container .right-container .content-container .item .content .hover-details-container .unit .price-container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 .right-container .content-container .content-one .content-one-details,
 .right-container .content-container .content-two .content-two-details,
@@ -296,6 +391,7 @@ section{
     position: absolute;
     bottom: 0;
     left: 10%;
+   
 }
 
 .right-container .content-container .content-one .content-one-details h1,
@@ -326,11 +422,7 @@ section{
     margin-bottom: 80px;
 }
 
-.right-container .content-container .content-one{
-    background-image: url("../img/MVUNITB.jpeg") ;
-    position: relative;
 
-}
 .right-container .content-container .content-two{
     background-image: url("../img/img2.jpg");
     position: relative;

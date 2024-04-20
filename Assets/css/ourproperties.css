@@ -290,7 +290,7 @@ header nav a:hover{
     display: none;
     z-index: 999 ;
     position:fixed;
-    animation: popUp  .5s linear;
+    animation: popUp  .4s linear;
     left: 0;
     top: 80px;
     overflow: auto;
@@ -314,7 +314,8 @@ header nav a:hover{
    
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 100vw;
+    height: 600px;
     background-color: white;
     border-radius: 10px;
     margin: 20px 30px;
@@ -323,6 +324,10 @@ header nav a:hover{
     2px 2px  3px rgba(0, 0, 0, 0.2);
     scroll-behavior: smooth;
 
+ }
+
+ .selected-item-container .main-item-container::-webkit-scrollbar{
+    display: none;
  }
 
  
@@ -351,6 +356,7 @@ header nav a:hover{
     
     padding: 20px 0px;
     display: grid;
+    height: 100vh;
     grid-template-columns: repeat(auto-fit, 400px);
     gap: 30px;
     overflow: auto;
