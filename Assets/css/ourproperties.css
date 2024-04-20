@@ -4,6 +4,8 @@
     --primary-color:#003399;
     --primar-text-color:#0140FF;
     --sold-bg-color:#990000;
+    --on-going-bg-color:#8EDB51;
+    --soon-to-rise-bg-color:#DADD58;
 }
 
 *{
@@ -123,10 +125,12 @@ section{
     display: flex;
     flex-direction: column;
     transition: transform 1s ease-in-out;
-   
 }
 
-.item .sale-container, .item .sold-container{
+.item .sale-container, 
+.item .sold-container, 
+.item .on-going-container,
+.item .soon-to-rise-container{
     width: auto;
     height: auto;
     padding: 10px 20px;
@@ -138,13 +142,24 @@ section{
     z-index: 1;
 }
 
-.item .sale-container h3, .item .sold-container h3{
+.item .sale-container h3, 
+.item .sold-container h3,
+.item .on-going-container h3,
+.item .soon-to-rise-container h3{
     font-weight: 600;
     font-size: 1rem;
 }
 
 .item .sold-container{
     background-color: var(--sold-bg-color);
+}
+
+.item .on-going-container{
+    background-color: var(--on-going-bg-color);
+}
+
+.item .soon-to-rise-container{
+    background-color: var(--soon-to-rise-bg-color);
 }
 
 .item .content-container{
@@ -175,9 +190,12 @@ section{
 .item .property-name{
     font-weight: 500;
     font-size: 1.5rem;
-    height: 40%;
+    height: 20%;  
+}
 
-    
+.item .property-place{
+
+    height: 20%;  
 }
 
 .item .line{
