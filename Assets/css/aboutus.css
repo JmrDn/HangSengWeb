@@ -185,8 +185,11 @@ section{
 PROFILES STYLES 
 ===================================*/
 #profile-sec {
-    background-color: #ffffff;
     color: #000000;
+}
+
+.container {
+    position: relative;
 }
 
 .profile-div {
@@ -198,7 +201,7 @@ PROFILES STYLES
     border: 1px solid lightgrey;
 }
 
-.profile-div h4{
+.profile-div h4 {
     padding-top: 5px;
 }
 
@@ -217,6 +220,43 @@ PROFILES STYLES
 
 .profile-div img {
     border: 10px double #000;
+    transition: transform 0.3s ease;
+}
+
+.profile-div:hover img {
+    transform: scale(1.1);
+}
+
+.profile-content {
+    position: relative;
+    z-index: 1;
+}
+
+.see-more-btn {
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    color: #555;
+    font-size: 16px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.see-more-btn::after {
+    content: "\2192";
+    position: absolute;
+    right: 10px;
+    transition: transform 0.3s ease;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.see-more-btn:hover {
+    color: var(--primar-text-color);
+}
+
+.see-more-btn:hover::after {
+    transform: translate(10px, -50%);
 }
 
 @media (min-width: 768px) {
