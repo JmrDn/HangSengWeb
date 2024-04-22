@@ -155,3 +155,7 @@ sumakwelHomes.addEventListener('click', function(){
     showItemSelected("sumakwel-homes");
 
 });
+
+document.querySelector('#martinville-homes-unitb').addEventListener('click',function(){
+    window.location.href ="../../Modules/Our properties/For Sale/martinvillehomes.html";
+});

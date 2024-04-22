@@ -1,8 +1,13 @@
 const header = document.querySelector('header');
 const logo = document.querySelector('header img');
+const homeNav = document.getElementById('home-nav');
 
 
 logo.addEventListener('click', function(){
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+})
+
+homeNav.addEventListener('click', function(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
 })
 
@@ -104,3 +109,4 @@ document.querySelector('.news-and-events-container').addEventListener('mousemove
     const walk = (x - startXS3) * 3; // Adjust this multiplier for desired drag speed
     document.querySelector(' .news-and-events-container').scrollLeft = scrollLeftS3 - walk;
 });
+
