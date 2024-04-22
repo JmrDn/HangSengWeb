@@ -90,6 +90,7 @@ header nav a:hover{
     background-color: #F8F8F8;
     position: relative;
     margin-top: 80px;
+  
  
     
 }
@@ -112,10 +113,13 @@ header nav a:hover{
 }
 
 .list-of-properties-container{
+    width: auto;
     padding: 20px 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, 400px);
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    grid-template-rows: repeat(auto-fit, minmax(400px, 1fr ));
     gap: 30px;
+    justify-content: center;
 }
 
 .item{
@@ -130,6 +134,7 @@ header nav a:hover{
     display: flex;
     flex-direction: column;
     transition: transform 1s ease-in-out;
+    
 }
 
 .item .sale-container, 
@@ -323,6 +328,7 @@ header nav a:hover{
     box-shadow: -1px -1px  3px rgba(0, 0, 0, 0.2),
     2px 2px  3px rgba(0, 0, 0, 0.2);
     scroll-behavior: smooth;
+    margin-bottom: 20px;
 
  }
 
@@ -361,6 +367,7 @@ header nav a:hover{
     gap: 30px;
     overflow: auto;
     justify-content: center;
+    margin-bottom: 40px;
    
     
  }
