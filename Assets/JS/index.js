@@ -1,6 +1,8 @@
 const header = document.querySelector('header');
 const logo = document.querySelector('header img');
 const homeNav = document.getElementById('home-nav');
+const martinVilleHomesUnitB = document.getElementById('martin-ville-homes-unit-b');
+const martinVilleOpenHouseUnitB = document.getElementById('matin-ville-open-house-unit-b');
 
 
 logo.addEventListener('click', function(){
@@ -10,6 +12,14 @@ logo.addEventListener('click', function(){
 homeNav.addEventListener('click', function(){
     window.scrollTo({ top: 0, behavior: 'smooth' });
 })
+
+martinVilleHomesUnitB.addEventListener('click',function(){
+    window.location.href="../Modules/Our properties/For Sale/martinvillehomes.html"
+});
+
+martinVilleOpenHouseUnitB.addEventListener('click',function(){
+    window.location.href="../Modules/News and Events/Contents/martin-ville-open-house.html"
+});
 
 
 window.addEventListener('scroll', function() {

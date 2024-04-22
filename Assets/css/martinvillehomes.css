@@ -106,9 +106,12 @@ header nav a:hover{
     position: absolute;
     bottom: 20px;
 }
-.carousel-item h5{
+.carousel-item h3{
     color: white;
     filter: drop-shadow(0 0 .5px black);
+    margin-bottom: 20px;
+    font-weight: 600;
+    
 }
 
 /* Style for carousel controls */
