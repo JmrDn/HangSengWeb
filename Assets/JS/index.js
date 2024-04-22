@@ -3,6 +3,7 @@ const logo = document.querySelector('header img');
 const homeNav = document.getElementById('home-nav');
 const martinVilleHomesUnitB = document.getElementById('martin-ville-homes-unit-b');
 const martinVilleOpenHouseUnitB = document.getElementById('matin-ville-open-house-unit-b');
+const seeAllNewsAndEvents = document.getElementById('see-all');
 
 
 logo.addEventListener('click', function(){
@@ -19,6 +20,10 @@ martinVilleHomesUnitB.addEventListener('click',function(){
 
 martinVilleOpenHouseUnitB.addEventListener('click',function(){
     window.location.href="../Modules/News and Events/Contents/martin-ville-open-house.html"
+});
+
+seeAllNewsAndEvents.addEventListener('click',function(){
+    window.location.href="../Modules/News and Events/newsandevent.html"
 });
 
 

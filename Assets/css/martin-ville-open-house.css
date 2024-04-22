@@ -149,39 +149,17 @@ header nav a:hover{
 
 }
 
-.article-content-container .context-container .first-container img,
-.article-content-container .context-container .second-container img,
-.article-content-container .context-container .third-container img,
-.article-content-container .context-container .fourth-container img,
-.article-content-container .context-container .fifth-container img,
-.article-content-container .context-container .sixth-container img,
-.article-content-container .context-container .seventh-container img,
-.article-content-container .context-container .eighth-container img{
+.article-content-container .context-container img {
     width: 100%;
-    height: 500px;
+    height: 400px;
 }
 
-.article-content-container .context-container .first-container p,
-.article-content-container .context-container .second-container p,
-.article-content-container .context-container .third-container p,
-.article-content-container .context-container .fourth-container p,
-.article-content-container .context-container .fifth-container p,
-.article-content-container .context-container .sixth-container p,
-.article-content-container .context-container .seventh-container p,
-.article-content-container .context-container .eighth-container p
-{
+.article-content-container .context-container .context p{
     margin-top: 20px;
     text-align: justify;
 }
 
-.article-content-container .context-container .first-container ,
-.article-content-container .context-container .second-container ,
-.article-content-container .context-container .third-container ,
-.article-content-container .context-container .fourth-container,
-.article-content-container .context-container .fifth-container ,
-.article-content-container .context-container .sixth-container ,
-.article-content-container .context-container .seventh-container ,
-.article-content-container .context-container .eighth-container {
+.article-content-container .context-container .context {
     display: flex;
     flex-direction: column;
     width: 100%;
