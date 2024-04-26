@@ -98,6 +98,16 @@ header nav a:hover{
     bottom: 0;
 }
 
+.article-header-container .title-container svg{
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+
+ .article-header-container .title-container svg:hover path {
+    fill: darkgray;
+ }
+
 .article-header-container .title-container .news-or-events-container{
     width: 100px;
     height: auto;

@@ -23,12 +23,21 @@
         <div class="panel-title-container">
             <h1>Our Properties</h1>
             <div class="line"></div>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+            <div class="description-and-filter-container">
+                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+                <div class="filter-container">
+                   <button class="active-filter" data-name="all">All</button>
+                   <button data-name="for-sale" >For Sale</button>   
+                   <button data-name="on-going">On Going</button>   
+                   <button data-name="soon-to-rise">Soon to Rise</button>   
+                   <button data-name="sold">Sold</button>      
+                </div>
+            </div>
         </div>
         <div class="list-of-properties-container">
 
             <!--ANVAYA COVE-->
-            <div class="item item-1" id="anvaya-cove">
+            <div class="item item-1 .for-sale-item" id="anvaya-cove" data-name="for-sale">
                 <div class="img-container"><img src="../../Assets/img/anvayacove.jpg"/></div>
                 <div class="sale-container"><h3>FOR SALE</h3></div>
                 <div class="content-container">
@@ -65,8 +74,8 @@
                 </div>
             </div>
 
-            <!--FRACER PLACE-->
-            <div class="item item-2" id="fracer-place">
+            <!--FRASER PLACE-->
+            <div class="item item-2" id="fraser-place" data-name="for-sale">
                 <div class="img-container"><img src="../../Assets/img/FRACERPLACE.png"/></div>
                 <div class="sale-container"><h3>FOR SALE</h3></div>
                 <div class="content-container">
@@ -101,7 +110,7 @@
             </div>
 
              <!--MARTINVILLE HOMES-->
-             <div class="item item-3" id="martin-ville">
+            <div class="item item-3" id="martin-ville" data-name="for-sale">
                 <div class="img-container"><img src="../../Assets/img/MVUNITB.jpeg"/></div>
                 <div class="sale-container"><h3>FOR SALE</h3></div>
                 <div class="content-container">
@@ -139,7 +148,7 @@
             </div>
 
             <!--GREEN HEIGHTS PHASE 2-->
-            <div class="item item-4" id="GHPhase2">
+            <div class="item item-4" id="GHPhase2" data-name="on-going">
                 <div class="img-container"><img src="../../Assets/img/GHPH2.jpg"/></div>
                 <div class="on-going-container"><h3>ON GOING</h3></div>
                 <div class="content-container">
@@ -177,7 +186,7 @@
             </div>
             
             <!--GREEN HEIGHTS SECURITY BANK-->
-            <div class="item item-5">
+            <div class="item item-5" data-name="on-going">
                 <div class="img-container"><img src="../../Assets/img/GHSecurityBank.jpg"/></div>
                 <div class="on-going-container"><h3>ON GOING</h3></div>
                 <div class="content-container">
@@ -215,7 +224,7 @@
             </div>
 
             <!--BRGY SAN ANTONIO-->
-            <div class="item item-6">
+            <div class="item item-6" data-name="soon-to-rise">
                 <div class="img-container"><img src="../../Assets/img/1.png"/></div>
                 <div class="soon-to-rise-container"><h3>SOON TO RISE</h3></div>
                 <div class="content-container">
@@ -253,7 +262,7 @@
             </div>
 
              <!--MAPAYAPA VILLAGE-->
-             <div class="item item-7">
+             <div class="item item-7" data-name="soon-to-rise">
                 <div class="img-container"><img src="../../Assets/img/1.png"/></div>
                 <div class="soon-to-rise-container"><h3>SOON TO RISE</h3></div>
                 <div class="content-container">
@@ -291,7 +300,7 @@
             </div>
 
              <!--GREEN HEIGHTS PHASE 1-->
-             <div class="item item-8" id="GHPhase1">
+             <div class="item item-8" id="GHPhase1" data-name="sold">
                 <div class="img-container"><img src="../../Assets/img/GHPHASE1UNIT2.jpg"/></div>
                 <div class="sold-container"><h3>SOLD</h3></div>
                 <div class="content-container">
@@ -329,7 +338,7 @@
             </div>
 
                <!--LEVITOWN PARK ROW-->
-            <div class="item item-9" id="levitown-park-row">
+            <div class="item item-9" id="levitown-park-row" data-name="sold">
                 <div class="img-container"><img src="../../Assets/img/1.png"/></div>
                 <div class="sold-container"><h3>SOLD</h3></div>
                 <div class="content-container">
@@ -367,7 +376,7 @@
             </div>
 
             <!--SUMAKWEL HOMES-->
-            <div class="item item-10" id="sumakwel-homes">
+            <div class="item item-10" id="sumakwel-homes" data-name="sold">
                 <div class="img-container"><img src="../../Assets/img/1.png"/></div>
                 <div class="sold-container"><h3>SOLD</h3></div>
                 <div class="content-container">
@@ -405,7 +414,7 @@
             </div>
 
              <!--STA RITA PLACE-->
-             <div class="item item-11" id="sta-rita">
+             <div class="item item-11" id="sta-rita" data-name="sold">
                 <div class="img-container"><img src="../../Assets/img/1.png"/></div>
                 <div class="sold-container"><h3>SOLD</h3></div>
                 <div class="content-container">
@@ -442,8 +451,8 @@
                 </div>
             </div>
 
-             <!--UPS Homes-->
-             <div class="item item-12" id="up-homes">
+             <!--UPS Homes--> 
+             <div class="item item-12" id="up-homes" data-name="sold">
                 <div class="img-container"><img src="../../Assets/img/1.png"/></div>
                 <div class="sold-container"><h3>SOLD</h3></div>
                 <div class="content-container">
@@ -751,7 +760,7 @@
             </div>
        
             <div class="item-container" >
-                <div class="unit a">
+                <div class="unit a" id="martinville-homes-unita">
                     <div class="img-container"><img src="../../Assets/img/MVUNITB.jpeg"/></div>
                     <div class="on-going-container"><h3>ON GOING</h3></div>
                     <div class="content-container">
@@ -824,7 +833,7 @@
                     <div class="property-price"><h2>P6,100,000</h2></div>
                     </div>
                 </div>
-                <div class="unit c">
+                <div class="unit c" id="martinville-homes-unitc">
                     <div class="img-container"><img src="../../Assets/img/MVUNITB.jpeg"/></div>
                     <div class="on-going-container"><h3>ON GOING</h3></div>
                     <div class="content-container">

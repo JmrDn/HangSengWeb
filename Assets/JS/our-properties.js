@@ -156,6 +156,55 @@ sumakwelHomes.addEventListener('click', function(){
 
 });
 
-document.querySelector('#martinville-homes-unitb').addEventListener('click',function(){
+document.querySelector('#martinville-homes-unita').addEventListener('click',function(){
+ 
+    localStorage.setItem('property-name', 'Unit A');
     window.location.href ="../../Modules/Our properties/For Sale/martinvillehomes.html";
 });
+
+document.querySelector('#martinville-homes-unitb').addEventListener('click',function(){
+ 
+    localStorage.setItem('property-name', 'Unit B');
+    window.location.href ="../../Modules/Our properties/For Sale/martinvillehomes.html";
+});
+
+document.querySelector('#martinville-homes-unitc').addEventListener('click',function(){
+ 
+    localStorage.setItem('property-name', 'Unit C');
+    window.location.href ="../../Modules/Our properties/For Sale/martinvillehomes.html";
+});
+
+document.querySelector("#anvaya-cove").addEventListener("click", function(){
+    window.location.href="../../Modules/Our properties/For Sale/anvaya-cove.html"
+});
+
+document.querySelector("#fraser-place").addEventListener("click", function(){
+    window.location.href="../../Modules/Our properties/For Sale/fraser-place.html"
+});
+
+// Get all filter buttons
+const filterButtons = document.querySelectorAll('.filter-container button');
+const propertiesItem = document.querySelectorAll('.list-of-properties-container .item');
+
+// Define the filterItems function
+const filterItems = (e) => {
+
+    // Remove active-filter class from all buttons
+    document.querySelectorAll(".filter-container  .active-filter")
+        .forEach(btn => btn.classList.remove("active-filter"));
+
+    e.target.classList.add("active-filter");
+
+    propertiesItem.forEach(item =>{
+        item.classList.add("hide");
+
+        if (item.dataset.name === e.target.dataset.name || e.target.dataset.name === "all"){
+            item.classList.remove("hide");
+        }
+    })
+}
+
+// Attach the click event listener to each filter button
+filterButtons.forEach(button => button.addEventListener("click", filterItems));
+ 
+

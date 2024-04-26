@@ -3,6 +3,9 @@
 :root{
     --primary-color:#003399;
     --primar-text-color:#0140FF;
+    --sold-bg-color:#990000;
+    --on-going-bg-color:#8EDB51;
+    --soon-to-rise-bg-color:#DADD58;
 }
 
 *{
@@ -100,6 +103,8 @@ header nav a:hover{
 .carousel-item img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
+  
    
 }
 .carousel-indicators{
@@ -288,26 +293,24 @@ header nav a:hover{
     margin-top: 20px;
 
 }
-.details-container .features {
+.details-container :where(.features, .amenities, .property-details) {
    
     margin-top: 20px;
 }
-.details-container .features h1{
+.details-container :where(.features h1, .property-details h1){
     color: var(--primary-color);
     font-weight: 700;
 }
 
-.details-container .features ul{
+.details-container :where(.features ul, .property-details ul) {
     margin-top: 20px;
 }
 
-.details-container .features ul li{
+.details-container :where(.features ul li, .property-details ul li) {
     font-size: 1.3rem;
 }
 
-.details-container .amenities{
-    margin-top: 20px;
-}
+
 
 .details-container .amenities h1{
     color: var(--primary-color);
@@ -334,6 +337,203 @@ header nav a:hover{
 .details-container .location .location-gmap-container{
     margin-top: 20px;
 }
+
+.other-properties-container{
+    padding:  20px 100px;
+    height: auto;
+    position: relative;
+    margin-top: 20px;
+}
+
+.other-properties-container h1{
+    color: var(--primary-color);
+    font-weight: 700;
+    text-align: center;
+}
+
+.other-properties-container .list-of-properties-container{
+    width: auto;
+    padding: 20px 0px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    grid-template-rows: repeat(auto-fit, minmax(400px, 1fr ));
+    gap: 30px;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.item{
+    height: 460px;
+    background-color: white;
+    position: relative;
+    box-shadow: -1px -1px  3px rgba(0, 0, 0, 0.2),
+                2px 2px  3px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    cursor: pointer;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 1s ease-in-out;
+    
+}
+
+.item .sale-container, 
+.item .sold-container, 
+.item .on-going-container,
+.item .soon-to-rise-container{
+ 
+
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: white;
+    position: absolute;
+    top: 20px;
+    right: 0px;
+    z-index: 1;
+    height: 40px;
+
+}
+
+.item .sale-container h3, 
+.item .sold-container h3,
+.item .on-going-container h3,
+.item .soon-to-rise-container h3{
+    font-weight: 600;
+    font-size: 1rem;
+   
+}
+
+.item .sold-container{
+    background-color: var(--sold-bg-color);
+}
+
+.item .on-going-container{
+    background-color: var(--on-going-bg-color);
+}
+
+.item .soon-to-rise-container{
+    background-color: var(--soon-to-rise-bg-color);
+}
+
+.item .content-container{
+    padding: 10px 20px;
+    position: relative;
+    height: 50%;
+}
+
+.item .img-container{
+    overflow: hidden;
+    height: 50%;
+}
+.item img{
+    width: 100%;
+    height: 100%;
+    transition: transform 1s ease-in-out;
+    
+}
+
+.item:hover img{
+    transform: scale(1.2); 
+}
+
+.item:hover{
+    transform: translateY(-20px);
+}
+
+.item .property-name{
+    font-weight: 500;
+    font-size: 1.5rem;
+    height: 20%;  
+}
+
+.item .property-place{
+
+    height: 20%;  
+}
+
+.other-properties-container .list-of-properties-container .item .line{
+    width: 470px;
+    background-color:lightgray;
+    height: .5px;
+
+    margin-left: -20px;
+}
+
+
+
+.property-price {
+    display: flex;
+    justify-content: st;
+    margin-top: 10px;
+    font-weight: 500;
+  
+}
+
+
+
+.property-price h2{
+    font-weight: 500;
+    font-size: 1.3rem;
+    color: var(--primary-color);
+}
+.item .property-name,.item .property-price{
+    padding: 10px 0px;
+    
+}
+
+.item .features{
+    display: flex;
+    align-items: center;
+ 
+    
+
+}
+
+.item .features .beds-container,
+ .item .features .baths-container{
+    display: flex;
+    justify-content: center;
+ } 
+
+ .item .features .baths-container{
+    margin-left: 20px;
+ }
+
+ .item .features .beds-container p,
+ .item .features .baths-container p{
+    margin-left: 5px;
+    font-weight: 400px;
+    font-size: 1rem;
+    
+ }
+
+ .item .lot-and-floor{
+    display: flex;
+    align-items: start;
+   margin-top: -10px;
+
+}
+
+.item .lot-and-floor .lot-area-container,
+.item .lot-and-floor .floor-area-container{
+    display: flex;
+    align-items: center;
+ } 
+
+ .item .lot-and-floor .floor-area-container{
+    margin-left: 20px;
+ }
+
+ .item .lot-and-floor .lot-area-container p,
+ .item .lot-and-floor .floor-area-container p{
+    font-weight: 400px;
+    font-size: 1rem;
+ }
+
+ #fracer-place-flr-area{
+    margin-left: 0;
+ }
 
 
 

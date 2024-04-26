@@ -6,6 +6,7 @@
     --sold-bg-color:#990000;
     --on-going-bg-color:#8EDB51;
     --soon-to-rise-bg-color:#DADD58;
+    --background-color:#F8F8F8;
 }
 
 *{
@@ -18,7 +19,7 @@ body{
     scroll-behavior: smooth;
     -ms-overflow-style: none; /* Internet Explorer/Edge */
     position: relative;
-    background-color: #F8F8F8;
+    background-color: var(--background-color);
 
 }
 body::-webkit-scrollbar {
@@ -112,6 +113,38 @@ header nav a:hover{
     font-weight: 500;
 }
 
+.panel-title-container .description-and-filter-container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.panel-title-container .description-and-filter-container .filter-container{
+    display: flex;
+    align-self: flex-end;
+    margin-top: 20px;
+}
+
+.panel-title-container .description-and-filter-container .filter-container button{
+    padding: 0px 10px;
+    color: gray;
+    cursor: pointer;
+    width: auto;
+    height: auto;
+    margin: 0px 10px;
+    background-color: var(--background-color);
+    border: none;
+    font-size: 1rem;
+}
+
+
+
+.panel-title-container .description-and-filter-container .filter-container .active-filter {
+    color: var(--primar-text-color);
+    border-bottom: solid 2px var(--primar-text-color);
+    font-weight: 600;
+}
+
 .list-of-properties-container{
     width: auto;
     padding: 20px 0px;
@@ -121,6 +154,7 @@ header nav a:hover{
     gap: 30px;
     justify-content: center;
 }
+
 
 .item{
     height: 460px;
@@ -135,6 +169,10 @@ header nav a:hover{
     flex-direction: column;
     transition: transform 1s ease-in-out;
     
+}
+
+.hide{
+    display: none;
 }
 
 .item .sale-container, 
