@@ -500,6 +500,7 @@ section{
     width: 100%;
     margin-bottom: 20px;
     margin-top: 20px;
+    object-fit: cover;
 }
 
 .third-container .news-and-events-container .context:hover img  {
