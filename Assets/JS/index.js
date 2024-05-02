@@ -4,6 +4,8 @@ const homeNav = document.getElementById('home-nav');
 const martinVilleHomesUnitB = document.getElementById('martin-ville-homes-unit-b');
 const martinVilleOpenHouseUnitB = document.getElementById('matin-ville-open-house-unit-b');
 const seeAllNewsAndEvents = document.getElementById('see-all');
+const anvayaCove = document.getElementById('anvaya-cove');
+const fraserPlace = document.getElementById('fraser-place');
 
 
 logo.addEventListener('click', function(){
@@ -16,6 +18,14 @@ homeNav.addEventListener('click', function(){
 
 martinVilleHomesUnitB.addEventListener('click',function(){
     window.location.href="../Modules/Our properties/For Sale/martinvillehomes.html"
+});
+
+anvayaCove.addEventListener('click', function(){
+    window.location.href="../Modules/Our properties/For Sale/anvaya-cove.html"
+});
+
+fraserPlace.addEventListener('click', function(){
+    window.location.href="../Modules/Our properties/For Sale/fraser-place.html"
 });
 
 martinVilleOpenHouseUnitB.addEventListener('click',function(){

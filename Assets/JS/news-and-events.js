@@ -33,5 +33,16 @@ document.querySelector('.item8').addEventListener('click', function(){
     window.location.href ="../../Modules/News and Events/Contents/martin-ville-open-house.html";
 });
 
+document.querySelector('.item9').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/general-assembly-with-dazzle.html";
+});
+
+document.querySelector('.item10').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/alfonso-cavite-eggplant-harvest.html";
+});
+
+document.querySelector('.item11').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/construction-safety-seminar.html";
+});
 
 
