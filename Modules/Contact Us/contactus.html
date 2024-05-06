@@ -20,53 +20,64 @@
         </nav>
     </header>
 
-<div class="contact-us-container">
-        <h1>Get in touch with Us</h1>
-        <br>
-        <p>Stay connected and be the first to know about the latest developments and forthcoming ventures with Hang Seng Properties.</p>
-        <p>Dive into our articles to explore current trends, insights, and all the exciting news about our projects.</p>
-        
-        <div class="contact-form-container">
-            <form id="contact-form">
-              <strong>
-                <label for="full-name">Full Name:</label>
-                <input type="text" id="full-name" name="full_name" required placeholder="Fullname">
+<div class="container">
+    <div class="form-container">
+        <div class="title-container">
+            <h1>Get in touch with Us</h1>
+         
+            <p>Stay connected and be the first to know about the latest developments and forthcoming ventures with Hang Seng Properties.
+                Dive into our articles to explore current trends, insights, and all the exciting news about our projects.
+            </p>
 
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required placeholder="Email">
-
-                <label for="phone">Contact No.:</label>
-                <input type="tel" id="phone" name="phone" required placeholder="Contact No.">
-
-                <label for="topic">Topic:</label>
-    <select id="topic" name="topic" required> 
-        <option value="">Select a topic</option>
-        <option value="general-inquiry">General Inquiry</option>
-        <option value="property-listing">Property Listing</option>
-        <option value="buying-property">Buying a Property</option>
-        <option value="selling-property">Selling a Property</option>
-        <option value="events-and-viewing">Events and Viewings</option>
-        <option value="customer-support">Customer Support</option>
-    </select>
-
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
-              </strong>
-
-                <button type="submit">Send Message</button>
-            </form>
+          
         </div>
-        <div class="contact-details">
-          <h2>Contact Details:</h2>
-          <br>
-            <p>Email: ask@privatebroker.com.ph</p>
-            <br>
-            <p>Phone: 0917 105 7868</p>
-            <br>
-            <p>Address: Unit 2007, 20th Floor, Philippine AXA Life Centre, 1289 Sen. Gil Puyat Avenue Makati City, Makati, Philippines</p>
-        </div>
+        <form>
+            <h1>Let's Talk</h1>
+            <div class="input-box">
+                <h4>Name</h4>
+                <input type="text" placeholder="Name">
+            </div>
+            <div class="input-box">
+                <h4>Email</h4>
+                <input type="email" placeholder="Email">
+            </div>
+            <div class="input-box">
+                <h4>Phone Number</h4>
+                <input type="tel" placeholder="Phone number">
+            </div>
+
+            <div class="select-box">
+                <h4>Topic</h4>
+                <select class="select-item" id="topic" name="topic" required> 
+                    <option value="">Select a topic</option>
+                    <option value="general-inquiry">General Inquiry</option>
+                    <option value="property-listing">Property Listing</option>
+                    <option value="buying-property">Buying a Property</option>
+                    <option value="selling-property">Selling a Property</option>
+                    <option value="events-and-viewing">Events and Viewings</option>
+                    <option value="customer-support">Customer Support</option>
+                </select>
+            </div>
+            
+            <div class="input-box">
+                <h4>Message</h4>
+                <textarea id="message" name="message" placeholder="Enter Message" rows="4" required></textarea>
+            </div>
+           
+
+            <button>Submit</button>
+        </form>
     </div>
-
+    
+  
+</div>
+<div class="contact-info-container">
+    <h1>Contact Details</h1>
+    <p id="address"> Unit 2007, 20th Floor, Philippine AXA Life Centre, 1289 Sen. Gil Puyat Avenue Makati City, Makati, Philippines</p>
+    <p id="phone"> 0917 105 7868</p>
+    <p id="email"> ask@privatebroker.com.ph</p>
+     
+</div>
 <footer>
   <div class="top-container">
       <div class="top-left-container">

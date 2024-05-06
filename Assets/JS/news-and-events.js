@@ -44,5 +44,38 @@ document.querySelector('.item10').addEventListener('click', function(){
 document.querySelector('.item11').addEventListener('click', function(){
     window.location.href ="../../Modules/News and Events/Contents/construction-safety-seminar.html";
 });
+document.querySelector('.item13').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/green-heights-phase1-open-house.html";
+});
+document.querySelector('.item14').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/greenheights-phase1-brokers-orientation.html";
+});
 
+document.querySelector('.item15').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/hangseng-kickoff-in-boracay-2023.html";
+});
+document.querySelector('.item16').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/hangseng-kickoff-in-calatagan-batangas-2022.html";
+});
+
+document.querySelector('.item17').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/mapayapa-village-xmas-party-2022.html";
+});
+document.querySelector('.item18').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/mapayapa-village-xmas-party-with-brokers.html";
+});
+
+document.querySelector('.item19').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/sta-rita-place-unit1-brokers-orientation.html";
+});
+
+document.querySelector('.item20').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/team-building-in-anvaya-cove-2023.html";
+});
+document.querySelector('.item21').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/team-building-in-tagaytay.html";
+});
+document.querySelector('.item23').addEventListener('click', function(){
+    window.location.href ="../../Modules/News and Events/Contents/vaccination-for-workers.html";
+});
 

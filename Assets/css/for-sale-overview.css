@@ -216,7 +216,12 @@ header nav a:hover{
     border-radius: 5px;
     border: solid .5px lightgray;
     padding: 0px 15px;
+    cursor: pointer;
+    z-index: 99;
 
+}
+.bottom-container .right-container .form-container .input-box input:hover{
+    border-color: var(--primar-text-color);
 }
 
 .bottom-container .right-container .form-container .input-box input:focus{
