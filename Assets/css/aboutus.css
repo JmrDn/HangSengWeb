@@ -3,6 +3,7 @@
 :root{
     --primary-color:#003399;
     --primar-text-color:#0140FF;
+    --alternate-bg-color:#83A1DF;
 }
 
 *{
@@ -77,191 +78,212 @@ header nav a:hover{
 }
 
 section{
-    height: auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.header-container{
+    width: 100%;
+    height: 500px;
+    background-color: black;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+}
+
+.logo-container{
+    width: 570px;
+    height: 520px;
+    position:absolute;
+    left: -120px;
+    top: 0;
+}
+
+.logo-container img{
+    width: 100%;
+    height: 100%;
+}
+
+.logo-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #000; /* Adjust the color as per your design */
+    mix-blend-mode: hard-light;
+    opacity: 0.5;
+}
+
+.header-title{
+    height: 100%;
+    width: 100%;
+    color: white;
+    margin-left: 500px;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.header-title h1{
+    font-size: 5rem;
+}
+.header-title p{
+    font-size: 1.3rem;
+}
+
+.who-we-are-container{
+   
+    padding: 20px 100px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    height: auto;
+    margin-bottom: 100px;
   
 }
 
-.panel-bg-container{
-    background-color: black;
-    height: 400px;
-    width: 100%;
+.who-we-are-container :where(h1, p) {
+    text-align: center;
+}
+
+.who-we-are-container h1{
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    margin-top: 50px;
+}
+
+.mission-container{
+    background-color: var(--alternate-bg-color);
+    display: flex;
+    height: auto;
+}
+
+.vision-container{
+    display: flex;
+    height: auto;
+    background-color: white;
+}
+
+.mission-container .mission-image-container,
+.vision-container .vision-image-container{
+    flex-basis: 50%;
+    padding: 80px 0px 80px 100px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.panel-bg-container img{
-    height: 100px;
-    width: 140px;
-    margin-top: -150px;
-
+.vision-container .vision-image-container{
+    padding: 80px 100px 80px 0px;
 }
 
-.panel-bg-container .logo-name{
+.mission-container .mission-image-container img, .vision-container .vision-image-container img{
+    width: 400px;
+    height: 400px;
+}
+
+.mission-container .mission-description, .vision-container .vision-description{
+    flex-basis: 50%;
     display: flex;
     flex-direction: column;
-    margin-top: -150px;
-    margin-left: 10px;
-
+    justify-content: center;
+    padding: 80px 100px 80px 0px;
+}
+.vision-container .vision-description{
+    padding: 80px 0px 80px 100px;
 }
 
-.panel-bg-container .logo-name h1{
-    color: white;
-    font-family: Domine;
-    font-size: 3rem;
-    margin-top: 10px;
-    margin-left: 10px;
-    filter: drop-shadow(0 0 2px black);
-}
-
-.panel-bg-container .logo-name h2{
-    color: white;
-    margin-left: 10px;
-    margin-top: 5px;
-    filter: drop-shadow(0 0 2px black);
-}
-
-.content-container{
-    background-color: white;
-    width: 900px;
-    height: auto;
-    margin-top: -180px;
-    margin-bottom: 50px;
-    border-radius: 10px;
-    box-shadow: 0 0 2px black;
-    color: black;
-    padding: 50px;
-    display: flex;
-    flex-direction: column;
-}
-
-.content-container h1{
-    color: black;
-    font-size: 2rem;
-    
-}
-.content-container .line{
-    width: 150px;
-    height: 4px;
-    background-color: var(--primar-text-color);
-}
-
-.content-container p{
-    margin-top: 20px;
-}
-
-#second, #third{
-    margin-top: 50px;
-}
-
-#second-sub-title{
-    margin-top: 20px;
-}
-
-.content-container .mission-and-vision-container{
-    display: flex;
-    gap: 20px;
-    margin-top: 50px;
-}
-
-.content-container .mission-and-vision-container .mission-container,
-.content-container .mission-and-vision-container .vision-container{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+.mission-container .mission-description :where(h1, p),
+.vision-container .vision-description :where(h1, p){
     text-align: start;
 }
 
-.content-container .mission-and-vision-container .line{
+
+
+.mission-description h1,
+.vision-description h1{
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    margin-top: 50px;
+   
+}
+
+.our-team-container{
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+}
+
+.our-team-container h1{
+    margin:50px 0px;
+    font-size: 2.5rem;
+   
+}
+
+.list-container{
     width: 100%;
-    background-color: lightgray;
-    height: .2px;
-    margin-top: 10px;
-}
-/*=====================================
-PROFILES STYLES 
-===================================*/
-#profile-sec {
-    color: #000000;
-}
-
-.container {
-    position: relative;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    
+ 
 }
 
-.profile-div {
-    padding: 30px;
-    text-align: center;
+.list-container .card{
+    width: 550px;
+    height: 200px;
+    overflow: hidden;
+    display: flex;
+    gap: 20px;
+    margin-bottom: 50px;
+
 }
 
-.profile-div hr {
-    border: 1px solid lightgrey;
+.card .image-container{
+    width: 200px;
+    height: 200px;
+    flex-basis: 40%;
+    border-radius: 50%;
+    overflow: hidden;
+
 }
 
-.profile-div h4 {
-    padding-top: 5px;
+.card .profile-details{
+    flex-basis: 60%;
 }
 
-.profile-div h3 {
-    font-size: 25px;
-    font-weight: 700;
-    text-transform: uppercase;
-    padding-top: 15px;
-    margin-bottom: 10px;
+.card .profile-details .position{
+    margin-bottom: 20px;
+    font-weight: 500;
+    color: gray;
+   
 }
 
-.profile-div p {
-    padding-top: 15px;
-    padding-bottom: 10px;
+#see-more-btn{
+    background-color: var(--primary-color);
+    color: white;
+    padding: 15px 30px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    margin-bottom: 50px;
+    transition: .5s ease-in-out;
+    cursor: pointer;
 }
 
-.profile-div img {
-    border: 10px double #000;
-    transition: transform 0.3s ease;
+#see-more-btn:hover{
+    opacity: .8;
+    transform: translateY(-10px);
 }
 
-.profile-div:hover img {
-    transform: scale(1.1);
-}
 
-.profile-content {
-    position: relative;
-    z-index: 1;
-}
 
-.see-more-btn {
-    display: inline-block;
-    padding: 10px 30px;
-    text-decoration: none;
-    color: #555;
-    font-size: 16px;
-    position: relative;
-    transition: color 0.3s ease;
-}
-
-.see-more-btn::after {
-    content: "\2192";
-    position: absolute;
-    right: 10px;
-    transition: transform 0.3s ease;
-    top: 50%;
-    transform: translateY(-50%);
-}
-
-.see-more-btn:hover {
-    color: var(--primar-text-color);
-}
-
-.see-more-btn:hover::after {
-    transform: translate(10px, -50%);
-}
-
-@media (min-width: 768px) {
-    .profile-div {
-        float: left;
-        width: 50%;
-    }
-}
