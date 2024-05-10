@@ -50,14 +50,17 @@ seeAllNewsAndEvents.addEventListener('click',function(){
 window.addEventListener('scroll', function() {
     var section2 = document.getElementById('second');
     var section3 = document.getElementById('third');
+    var footer = this.document.querySelector('footer');
 
     // Get the positions of the sections relative to the viewport
     var section2Bottom = section2.getBoundingClientRect().bottom;
     var section3Bottom = section3.getBoundingClientRect().bottom;
+    var footerBottom = footer.getBoundingClientRect().bottom;
    
       // Check if the bottom of section 1 is in view
     if (section2Bottom<= window.innerHeight && section2Bottom >= 0||
-            section3Bottom <= window.innerHeight && section3Bottom >= 0) {
+            section3Bottom <= window.innerHeight && section3Bottom >= 0 ||
+            footerBottom <= window.innerHeight && footerBottom >= 0) {
                 
         // If section 1 bottom is in view, change the color of the nav
         header.style.backgroundColor = "#003399";
