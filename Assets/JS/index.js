@@ -6,6 +6,16 @@ const martinVilleOpenHouseUnitB = document.getElementById('matin-ville-open-hous
 const seeAllNewsAndEvents = document.getElementById('see-all');
 const anvayaCove = document.getElementById('anvaya-cove');
 const fraserPlace = document.getElementById('fraser-place');
+const sideNav = document.getElementById('side-nav');
+
+
+function openSideNav (){
+    sideNav.style.display = 'flex';
+}
+
+function closeSideNav(){
+    sideNav.style.display = 'none';
+}
 
 
 logo.addEventListener('click', function(){

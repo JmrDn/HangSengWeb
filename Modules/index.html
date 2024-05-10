@@ -6,6 +6,7 @@
     <title>Hang Seng Philippines</title>
     <link rel="shortcut icon" href="../Assets/img/hslogo.png" type="x-icon">
     <link rel="stylesheet" href="../Assets/css/index.css">
+    <link rel="stylesheet" href="./../Assets/css/navbar.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     
@@ -13,14 +14,33 @@
 <body>
     <header>
         <img src="../Assets/img/hslogo.png"/>
-        <nav>
-            <a  id="home-nav" class="navigation-active">Home</a>
-            <a href="./Our properties/ourproperties.html">Our Properties</a>
-            <a href="./News and Events/newsandevent.html">News and Events</a>
-            <a href="./Contact Us/contactus.html" >Contact Us</a>
-            <a href="./About Us/aboutus.html">About us</a>
+        <nav id="nav">
+            <a  id="home-nav" class="navigation-active web-nav">Home</a>
+            <a href="./Our properties/ourproperties.html" class="web-nav">Our Properties</a>
+            <a href="./News and Events/newsandevent.html" class="web-nav">News and Events</a>
+            <a href="./Contact Us/contactus.html" class="web-nav">Contact Us</a>
+            <a href="./About Us/aboutus.html" class="web-nav">About us</a>
+            <a id="menu" class="web-nav" onclick="openSideNav()"><svg width="20" height="12" viewBox="0 0 20 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M1 11H19M1 6H19M1 1H19" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                </a>
         </nav>
+
     </header>
+
+    <nav id="side-nav">
+        <a id="close" onclick="closeSideNav()"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.75806 17.2428L12.0011 11.9998L17.2441 17.2428M17.2441 6.75684L12.0001 11.9998L6.75806 6.75684" stroke="#FFF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+            </a>
+        <a href="./index.html"  id="home-nav" class="navigation-active">Home</a>
+        <a href="./Our properties/ourproperties.html">Our Properties</a>
+        <a href="./News and Events/newsandevent.html">News and Events</a>
+        <a href="./Contact Us/contactus.html" >Contact Us</a>
+        <a href="./About Us/aboutus.html">About us</a>
+    </nav>
+
+
     
     <section class="first-container" id="first">
      
