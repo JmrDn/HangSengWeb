@@ -36,7 +36,6 @@ section{
     height: 100vh;
     background-size: cover;
     background-repeat: no-repeat;
-    margin-top: -80px;
     filter: grayscale(40%);
     animation: changeBackgroundImage 40s infinite ease-in-out;   
 }
