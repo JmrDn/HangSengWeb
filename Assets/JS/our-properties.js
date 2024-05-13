@@ -213,8 +213,18 @@ filterButtons.forEach(button => button.addEventListener("click", filterItems));
   // Loop through each dropdown item and add event listener
   dropdownItems.forEach(item => {
     item.addEventListener('click', function() {
+
+       
       // Get the text content of the clicked item
       const buttonText = this.textContent.trim();
+
+      propertiesItem.forEach(item =>{
+        item.classList.add("hide");
+
+        if (item.dataset.name === this.dataset.name || this.dataset.name === "all"){
+            item.classList.remove("hide");
+        }
+    })
       
       // Update the text of the button with the clicked item's text
       const btn = document.querySelector('.btn');

@@ -557,9 +557,22 @@ body::-webkit-scrollbar {
         font-size: 2rem;
      }
 
-     .main-container .panel-title-container  .btn-group{
+    .panel-title-container  {
         display: flex;
-       
+        justify-content: space-between;
+        
+           
+     }
+
+     .main-container .panel-title-container .btn-group{
+        margin-left: auto;
+        display: flex;
+     }
+
+   
+   
+     .main-container .panel-title-container .btn-group .btn{
+        background-color: var(--primary-color);
      }
      .panel-title-container .description-and-filter-container .filter-container{
         display: none;
