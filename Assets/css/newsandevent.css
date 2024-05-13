@@ -24,6 +24,7 @@ section{
     display: flex;
     flex-direction: column;
     padding: 20px 100px;
+    margin-top: 80px;
     background-color: #F8F8F8;
 }
 
@@ -142,3 +143,40 @@ section{
     color: var(--primar-text-color);
     margin-top: 20px;
 }
+
+@media (max-width:1024px) {
+
+    section{
+        padding: 0 20px;
+    }
+
+}
+@media (max-width:768px) {
+
+    /*First Container*/
+    section{
+        padding: 0 20px;
+     
+    }
+    .container{
+       width: 100%;
+     
+       grid-template-columns: repeat(auto-fit, 100%);
+       
+    }
+    .panel-title-container h1{
+        font-size: 1.8rem;
+        transition: font-size .5s ease-in;    
+    }
+    
+    p{
+        font-size: 1rem;
+    }
+
+  
+    
+}  
+
+
+
+

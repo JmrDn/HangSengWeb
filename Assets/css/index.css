@@ -752,15 +752,17 @@ footer{
         padding: 0 20px;
     }
     #destination-title, #news-and-events-title{
+        width: 100%;
         font-size: 2rem;
         transition: font-size .5s ease-in;
       
     }
-
-    p{/*Third Container*/
+    /*Third Container*/
     .third-container{
         padding: 50px 20px;
     }
+    p{
+    
         font-size: 1rem;
     }
 

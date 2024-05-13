@@ -25,6 +25,7 @@ body::-webkit-scrollbar {
     flex-direction: column;
     padding: 20px 100px;
     gap: 100px;
+    margin-top: 80px;
 }
 
 
@@ -46,12 +47,14 @@ body::-webkit-scrollbar {
 .title-container h1{
     margin-top: 150px;
     font-size: 3rem;
+    transition: font-size 1s ease-in-out;
 }
 
 .title-container p{
     margin-top: 20px;
     font-size: 1.4rem;
     text-align: start;
+    transition: font-size 1s ease-in-out;
 }
 
 .form-container .input-box{
@@ -70,6 +73,7 @@ body::-webkit-scrollbar {
 }
 .form-container form h1{
     color: var(--primary-color);
+    transition: font-size 1s ease-in-out;
 }
 
 
@@ -354,4 +358,75 @@ footer{
 .top-right-container .our-offices i{
     margin-left: 10px;
     color: gray;
+}
+
+@media (max-width:1024px) {
+
+    .container{
+     
+        padding: 20px;
+        gap: 20px;
+      
+    }
+
+}
+@media (max-width:768px) {
+
+ 
+    .form-container{
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .title-container h1{
+        margin-top: 20px;
+        font-size: 2rem;
+        transition: font-size 1s ease-in-out;
+    }
+
+    .title-container p{
+        font-size: 1rem;
+    }
+
+    .form-container form h1{
+        font-size: 1.8rem;
+      
+    }
+    .contact-info-container  h1,
+    .contact-info-container  p{
+        width: 100%;
+        padding: 0px 20px;
+        text-align: center;
+        
+    }
+
+    .contact-info-container  h1{
+        font-size: 2rem;
+    }
+    .contact-info-container  p{
+        font-size: 1rem;
+    }
+
+     /*Footer Container*/
+     footer{
+        height: auto;
+        flex-direction: column;
+        padding: 50px 20px;
+    }
+    .top-container{
+        display: flex;
+        flex-direction: column;
+    }
+    .bottom-container{
+        margin-top: 100px;
+    }
+
+    .left-container{
+        height: 50%;
+    }
+    .right-container{
+        height: 50%;
+    }
+
+
 }
