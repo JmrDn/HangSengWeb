@@ -1,3 +1,3 @@
 function gotoOurTeam (){
-    window.location.href='../../../Modules/About Us/ourteam.html';
+    window.location.href='../../Modules/About Us/ourteam.html';
 }
