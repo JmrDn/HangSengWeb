@@ -84,3 +84,20 @@ body::-webkit-scrollbar {
     color: gray;
    
 }
+
+@media (max-width:768px){
+    .container{padding: 20px;}
+
+    .container h1{font-size: 1.8rem;}
+
+    .list-container .card{
+        flex-direction: column;
+        height: 500px;
+        align-items: center;
+        margin-bottom: 0;
+    }
+
+    .card .profile-details h2{
+        margin-top: 20px;
+    }
+}

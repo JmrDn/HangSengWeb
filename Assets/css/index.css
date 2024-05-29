@@ -64,16 +64,6 @@ section{
 
 
 
-.container-filter{
-    height: 100%;
-    width: 100%;
-    background: black;
-    z-index: 1;
-    opacity: .5;
-    display: flex;
-    align-items: center;
-    justify-content: flex-start;
-}
 
 
 
@@ -132,7 +122,7 @@ section{
     padding: 50px 100px;
     opacity: 1;
     filter: grayscale(0);
-    height: 100vh;
+    max-height: 800px;
     gap: 20px;
     background-color: white;
     position: relative;
@@ -141,6 +131,7 @@ section{
 
 .left-container{
     flex-basis: 50%;
+    max-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -218,6 +209,7 @@ section{
     flex-basis: 50%;
     overflow: hidden;
     position: relative;
+
   
     
 }
@@ -239,7 +231,7 @@ section{
 
 .second-container .right-container .content-container .item{
     min-width: 500px;
-    max-width: 500px;
+    
     height: 100%;
     margin-right: 10px;
     background-repeat: no-repeat;
@@ -406,16 +398,18 @@ section{
 
 
 .third-container{
-    background-color:white;
+    width: 100%;
+
     padding: 20px 100px;
     display: flex;
     flex-direction: column;
     overflow: hidden;
-    height: 100%;
+    min-height: 800px;
+    max-height: 800px;
 }
 
 .third-container .news-and-events-text{
-    height: 30%;
+    height: 200px;
     width: 100%;
  
 }
@@ -432,31 +426,42 @@ section{
 
 .third-container .news-and-events-container{
     width: 100%;
-    height: 60%;
+    min-height: 400px;
     display: flex;
+    padding: 5px;
     gap: 20px;
     overflow-x: auto;
+    overflow-y: hidden;
     scrollbar-width: none; /* Hide scrollbar */
     -ms-overflow-style: none; /* Hide scrollbar for IE/Edge */
     scroll-behavior: smooth;
+    margin-top: 50px;
+    
 }
 
 .third-container .news-and-events-container .context{
     display: flex;
     min-width: 350px;
-    height: 400px;
+    height: 100%;
     flex-direction: column;
     cursor: pointer;
     transition: 0.5s ease-in-out;
    
 }
 
-.third-container .news-and-events-container .context img{
+.third-container .news-and-events-container .context .image-container{
     height: 70%;
     width: 100%;
     margin-bottom: 20px;
     margin-top: 20px;
     object-fit: cover;
+}
+
+.third-container .news-and-events-container .context .image-container img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 .third-container .news-and-events-container .context:hover img  {
@@ -495,8 +500,9 @@ section{
     justify-content: start;
     align-items: center;
     cursor: pointer;
-    margin-top: 40px;
+    margin-top: 20px;
     margin-bottom: 20px;
+ 
    
 }
 
@@ -546,6 +552,7 @@ footer{
     display: flex;
     justify-content: center;
     align-items: center;
+    text-align: center;
     
 }
 
@@ -693,14 +700,17 @@ footer{
 
 .top-right-container{
     flex: 1;
+    
     padding: 20px;
     color: white;
     margin-top: 20px;
     position: relative;
+ 
 }
 .top-right-container p{
     padding: 0;
     margin-top: 5px;
+    text-overflow: ellipsis;
 
 }
 .top-right-container .our-offices {
@@ -794,6 +804,9 @@ footer{
     .content-container{
         margin-left: 0;
     }
+    .second-container .right-container .content-container .item{
+        min-width: 320px;
+    }
     .right-container .content-container .item .content h1{
         font-size: 1.5rem;
       
@@ -811,13 +824,15 @@ footer{
 
     /*Footer Container*/
     footer{
+      
         height: auto;
         flex-direction: column;
+        
         padding: 50px 20px;
     }
     .top-container{
         display: flex;
-        flex-direction: column;
+       flex-direction: column;
     }
     .bottom-container{
         margin-top: 100px;
