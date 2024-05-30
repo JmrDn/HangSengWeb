@@ -3,13 +3,13 @@ const ANVAYA_COVE = document.getElementById('anvaya-cove');
 
 if (FRASER_PLACE != null){
     FRASER_PLACE.addEventListener('click', function(){
-        window.location.href ="/Modules/Our properties/For Sale/fraser-place.html";
+        window.location.href ="../../Our properties/For Sale/fraser-place.html";
     });
 }
 
 if (ANVAYA_COVE != null){
     ANVAYA_COVE.addEventListener('click', function(){
-        window.location.href ="/Modules/Our properties/For Sale/anvaya-cove.html";
+        window.location.href ="../../Our properties/For Sale/anvaya-cove.html";
         console.log("anvaya cove clicked");
     });
 }
@@ -58,19 +58,19 @@ martinville.addEventListener('click', function(){
 document.querySelector('#martinville-homes-unita').addEventListener('click',function(){
  
     localStorage.setItem('property-name', 'Unit A');
-    window.location.href ="/Modules/Our properties/For Sale/martinvillehomes.html";
+    window.location.href ="../../Our properties/For Sale/martinvillehomes.html";
 });
 
 document.querySelector('#martinville-homes-unitb').addEventListener('click',function(){
  
     localStorage.setItem('property-name', 'Unit B');
-    window.location.href ="/Modules/Our properties/For Sale/martinvillehomes.html";
+    window.location.href ="../../Our properties/For Sale/martinvillehomes.html";
 });
 
 document.querySelector('#martinville-homes-unitc').addEventListener('click',function(){
  
     localStorage.setItem('property-name', 'Unit C');
-    window.location.href ="/Modules/Our properties/For Sale/martinvillehomes.html";
+    window.location.href ="../../Our properties/For Sale/martinvillehomes.html";
 });
 
 
