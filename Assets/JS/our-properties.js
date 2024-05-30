@@ -101,7 +101,6 @@ function hideItemSelected(){
     document.querySelector('.selected-item-container').style.display='none';
 
   
-
 };
 
 backBtn.forEach(backBtn => {
@@ -175,11 +174,11 @@ document.querySelector('#martinville-homes-unitc').addEventListener('click',func
 });
 
 document.querySelector("#anvaya-cove").addEventListener("click", function(){
-    window.location.href="../../Modules/Our properties/For Sale/anvaya-cove.html"
+    window.location.href="../../Modules/Our properties/For Sale/anvaya-cove.html";
 });
 
 document.querySelector("#fraser-place").addEventListener("click", function(){
-    window.location.href="../../Modules/Our properties/For Sale/fraser-place.html"
+    window.location.href="../../Modules/Our properties/For Sale/fraser-place.html";
 });
 
 // Get all filter buttons

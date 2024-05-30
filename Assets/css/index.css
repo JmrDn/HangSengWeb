@@ -42,22 +42,22 @@ section{
 
 @keyframes changeBackgroundImage {
     0%{
-        background-image: url(../img/img1.jpg);
+        background-image: url(../img/FRASERPLACE_LIVINGROOM.jpg);
     }
     20%{
-        background-image: url(../img/img2.jpg);
+        background-image: url(../img/FRASERPLACE10.jpg);
     }
     40%{
-        background-image: url(../img/img3.jpg);
+        background-image: url(../img/FRASERPLACE_EXTRA1.jpg);
     }
     60%{
-        background-image: url(../img/img4.jpg);
+        background-image: url(../img/img2.jpg);
     }
     80%{
-        background-image: url(../img/img5.jpg);
+        background-image: url(../img/img3.jpg);
     }
     100%{
-        background-image: url(../img/img1.jpg);
+        background-image: url(../img/img5.jpg);
     }
 }
 
