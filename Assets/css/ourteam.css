@@ -5,12 +5,43 @@
     --primar-text-color:#0140FF;
     --alternate-bg-color:#83A1DF;
 }
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Bold.otf") format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Regular.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Medium.otf") format('opentype');
+    font-weight: 500; /* Ensure this matches the weight of the Medium font */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Light.otf") format('opentype');
+    font-weight: 300; /* Ensure this matches the weight of the Light font */
+    font-style: normal;
+}
+
 
 *{
+    margin:0;
     padding:0;
-    margin: 0;
     box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
+    font-family: 'Gordita', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    
 }
 body{
     scroll-behavior: smooth;
@@ -26,6 +57,10 @@ body::-webkit-scrollbar {
     display: flex;
     flex-direction: column;
     padding: 20px 100px;
+}
+
+.container h1{
+    font-weight: bold;
 }
 
 
@@ -46,7 +81,7 @@ body::-webkit-scrollbar {
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    align-items: start;
     justify-content: center;
     gap: 20px;
     margin-bottom: 20px;
@@ -56,7 +91,7 @@ body::-webkit-scrollbar {
 
 .list-container .card{
     width: 550px;
-    height: 250px;
+    height: auto;   
     overflow: hidden;
     display: flex;
     gap: 20px;
@@ -76,7 +111,14 @@ body::-webkit-scrollbar {
 
 .card .profile-details{
     flex-basis: 60%;
+  
 }
+
+.card .profile-details h2{
+    font-weight: 500;
+    
+}
+
 
 .card .profile-details .position{
     margin-bottom: 20px;

@@ -5,11 +5,43 @@
     --primar-text-color:#0140FF;
 }
 
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Bold.otf") format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Regular.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Medium.otf") format('opentype');
+    font-weight: 500; /* Ensure this matches the weight of the Medium font */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Light.otf") format('opentype');
+    font-weight: 300; /* Ensure this matches the weight of the Light font */
+    font-style: normal;
+}
+
+
 *{
+    margin:0;
     padding:0;
-    margin: 0;
     box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
+    font-family: 'Gordita', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    
 }
 body{
     scroll-behavior: smooth;
@@ -48,6 +80,7 @@ body::-webkit-scrollbar {
     margin-top: 150px;
     font-size: 3rem;
     transition: font-size 1s ease-in-out;
+    font-weight: bold;
 }
 
 .title-container p{
@@ -74,6 +107,7 @@ body::-webkit-scrollbar {
 .form-container form h1{
     color: var(--primary-color);
     transition: font-size 1s ease-in-out;
+    font-weight: 500;
 }
 
 
@@ -161,6 +195,10 @@ body::-webkit-scrollbar {
     color: white;
     gap: 10px;
 }
+
+.contact-info-container h1{
+    font-weight: 500;
+}
 .line{
     width: 150px;
     height: 5px;
@@ -223,9 +261,7 @@ footer{
 .logo-content p{
     color: white;
     font-size: 30px;
-    font-weight: 800;
-    font-style: bold;
-    font-family: Domine;
+    font-weight: 500;
     text-align: start;
     margin-left: 10px;
 

@@ -8,12 +8,43 @@
     --soon-to-rise-bg-color:#DADD58;
     --background-color:#F8F8F8;
 }
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Bold.otf") format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Regular.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Medium.otf") format('opentype');
+    font-weight: 500; /* Ensure this matches the weight of the Medium font */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Light.otf") format('opentype');
+    font-weight: 300; /* Ensure this matches the weight of the Light font */
+    font-style: normal;
+}
+
 
 *{
+    margin:0;
     padding:0;
-    margin: 0;
     box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
+    font-family: 'Gordita', sans-serif;
+    font-weight: normal;
+    font-style: normal;
+    
 }
 body{
     scroll-behavior: smooth;
@@ -47,6 +78,10 @@ body::-webkit-scrollbar {
     flex-direction: column;
     
 }
+.panel-title-container h1{
+    font-size: 2rem;
+    font-weight: bold;
+}
 
 .panel-title-container .line{
     width: 150px;
@@ -57,7 +92,7 @@ body::-webkit-scrollbar {
 .panel-title-container p{
     font-size: 1.2rem;
     margin-top: 20px;
-    font-weight: 500;
+    font-weight: normal;
 }
 
 .panel-title-container .description-and-filter-container{
@@ -89,7 +124,7 @@ body::-webkit-scrollbar {
 .panel-title-container .description-and-filter-container .filter-container .active-filter {
     color: var(--primar-text-color);
     border-bottom: solid 2px var(--primar-text-color);
-    font-weight: 600;
+    font-weight: bold;
 }
 
 .list-of-properties-container{
@@ -142,7 +177,7 @@ body::-webkit-scrollbar {
 .item .sold-container h3,
 .item .on-going-container h3,
 .item .soon-to-rise-container h3{
-    font-weight: 600;
+    font-weight: 500;
     font-size: 1rem;
     display:flex;
     margin-top: -10px;
@@ -259,6 +294,7 @@ body::-webkit-scrollbar {
  .item .lot-and-floor{
     display: flex;
     align-items: start;
+    flex-wrap: wrap;
   
 
 }
@@ -266,8 +302,95 @@ body::-webkit-scrollbar {
 .item .lot-and-floor .lot-area-container,
  .item .lot-and-floor .floor-area-container{
     display: flex;
+
     align-items: center;
+   
  } 
+
+ .item .lot-and-floor .lot-area-container:hover .tool-tip-text{
+    visibility: visible;
+ }
+
+ .item .lot-and-floor .lot-area-container .tool-tip-text{
+    color: white;
+    background-color: black;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 1;
+    transition: transform .5s ease-in-out
+                opacicty .5s ease-in-out;
+    
+ }
+
+ .item .lot-and-floor .lot-area-container .tool-tip-text::before{
+    content: "";
+    position: absolute;
+    left: 35%;
+    bottom: 100%;
+    transform: translateY(65px);
+    border: 15px solid;
+    border-color: #000 #0000 #0000 #0000;
+    
+ }
+
+ .item .lot-and-floor .lot-area-container  svg{
+    margin-left: -100px;
+ }
+
+ .item .lot-and-floor .floor-area-container:hover .tool-tip-text{
+    visibility: visible;
+ }
+
+ .item .lot-and-floor .floor-area-container .tool-tip-text{
+    color: white;
+    background-color: black;
+    width: 100px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    transform: translateY(-100%);
+    visibility: hidden;
+    opacity: 1;
+    transition: transform .5s ease-in-out
+                opacicty .5s ease-in-out;
+    
+ }
+
+ .item .lot-and-floor .floor-area-container .tool-tip-text::before{
+    content: "";
+    position: absolute;
+    left: 35%;
+    bottom: 100%;
+    transform: translateY(65px);
+    border: 15px solid;
+    border-color: #000 #0000 #0000 #0000;
+    
+ }
+
+ .item .lot-and-floor .floor-area-container svg{
+    margin-left: -100px;
+ }
+
+
+
+ .item .lot-and-floor .lot-area-container svg,
+ .item .lot-and-floor .floor-area-container svg{
+    align-self: center;
+    margin-top: -10px;
+    margin-right: 10px;
+   
+
+ }
 
  .item .lot-and-floor .floor-area-container{
     margin-left: 20px;
@@ -317,7 +440,7 @@ body::-webkit-scrollbar {
     background-color: white;
     border-radius: 10px;
     margin: 20px 30px;
-    padding: 20px 80px;
+    padding: 20px 80px 0 80px;
     box-shadow: -1px -1px  3px rgba(0, 0, 0, 0.2),
     2px 2px  3px rgba(0, 0, 0, 0.2);
     scroll-behavior: smooth;

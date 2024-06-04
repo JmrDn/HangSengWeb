@@ -9,11 +9,41 @@
     --soon-to-rise-bg-color:#DADD58;
     --background-color:#F8F8F8;
 }
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Bold.otf") format('opentype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Regular.otf") format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Medium.otf") format('opentype');
+    font-weight: 500; /* Ensure this matches the weight of the Medium font */
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gordita';
+    src: url("../fonts/Gordita-Light.otf") format('opentype');
+    font-weight: 300; /* Ensure this matches the weight of the Light font */
+    font-style: normal;
+}
+
 *{
     padding:0;
     margin: 0;
     box-sizing: border-box;
-    font-family: "DM Sans", sans-serif;
+    font-family: "Gordita", sans-serif;
+    font-weight: normal;
+    font-style: normal;
 }
 
 header{
@@ -22,7 +52,7 @@ header{
     position: fixed;
     top: 0;
     left: 0;
-    background-color: var(--primary-color);
+    background: linear-gradient(to right, #4E7AA8, #042455, #000F22);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,8 +73,8 @@ header img:hover{
 
 header nav a {
     text-decoration: none;
-    font-weight: 600;
-    font-style: bold;
+    font-weight: normal;
+    font-style: normal;
     color: lightgray;
     margin: 0px 20px;
     transition: 0.5s ease ease-in-out;
@@ -75,7 +105,7 @@ header nav a:hover{
 
 #side-nav{
     position:fixed;
-    background-color: var(--primary-color);
+    background: radial-gradient(circle, #4E7AA8, #042455, #000F22);
     width: 100vw;
     height: 100mvh;
     z-index: 999;
@@ -91,8 +121,8 @@ header nav a:hover{
 
 #side-nav a{
     text-decoration: none;
-    font-weight: 600;
-    font-style: bold;
+    font-weight: normal;
+    font-style: normal;
     color: lightgray;
     margin: 0px 20px;
     transition: 0.5s ease ease-in-out;

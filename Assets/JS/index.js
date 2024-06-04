@@ -72,10 +72,10 @@ window.addEventListener('scroll', function() {
                 footerBottom <= window.innerHeight && footerBottom >= 0) {
                     
             // If section 1 bottom is in view, change the color of the nav
-            header.style.backgroundColor = "#003399";
+            header.style.background = "linear-gradient(to right, #4E7AA8, #042455, #000F22)";
         } else {
             // If section 1 bottom is not in view, revert to the original color
-            header.style.backgroundColor = "transparent";
+            header.style.background = "transparent";
         }
     }
   });
