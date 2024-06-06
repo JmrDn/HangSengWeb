@@ -194,6 +194,105 @@ section{
    
 }
 
+.history-container{
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 100px;
+    
+}
+
+.history-container h1{
+    font-weight: bold;
+    font-size: 3rem;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.history-container .birth-container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+}
+
+.history-container .birth-container .place{
+    margin-top: 50px;
+}
+
+.history-container .birth{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.birth-name{
+    font-size: 4rem;
+    font-weight: bold;
+}
+
+.history-container .birth .details{
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+
+}
+.history-container .birth .img{
+    flex-basis: 60%;
+    height: 400px;
+   
+}
+
+.history-container .birth .img img{
+    height: 100%;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+
+.service-container{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 100px 20px;
+    align-items: center;
+    gap: 20px;
+}
+
+.service-container h1{
+
+    font-size: 3rem;
+    font-weight: bold;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.service-container .services-list{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.service-container .services-list .services{
+    min-width: 300px;
+    max-width: 400px;
+    height: 300px;
+    
+}
+
+.service-container .services-list .services img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    aspect-ratio: 4 / 3;
+    object-position: center;
+
+}
+
+
+
 .our-team-container{
     height: auto;
     display: flex;
@@ -280,6 +379,10 @@ section{
         padding: 0 20px;
     }
 
+    .history-container{
+        padding: 0 20px;
+    }
+
 }
 @media (max-width:768px) {
 
@@ -356,7 +459,28 @@ section{
         width: 250px;
         height: 250px;
     }
+
+
+
+    .history-container h1{
+        font-size: 2.5rem;
+    }
+
+    .birth-name{
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 20px;
+    }
   
+    .history-container .birth{
+        flex-direction: column;
+        justify-content: start;
+        align-items: start;
+    }
+
+    .service-container h1{
+        font-size: 2.5rem;
+    }
     .list-container .card{
         flex-direction: column;
         height: 500px;

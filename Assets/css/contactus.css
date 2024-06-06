@@ -213,7 +213,7 @@ body::-webkit-scrollbar {
 
 footer{
     height: 400px;
-    background-color: black;
+    background: linear-gradient(to right, #4E7AA8, #042455, #000F22);
     display: flex;
     flex-direction: column;
     padding: 20px 100px;
@@ -222,7 +222,7 @@ footer{
     width: 100%;
     height: 25%;
     color: white;
-    background-color: black;
+
     display: flex;
     justify-content: center;
     align-items: center;

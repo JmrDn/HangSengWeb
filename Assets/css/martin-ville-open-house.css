@@ -96,6 +96,7 @@ header nav a:hover{
     padding: 100px;
     position: absolute;
     bottom: 0;
+
 }
 
 .article-header-container .title-container svg{
@@ -162,6 +163,7 @@ header nav a:hover{
 .article-content-container .context-container img {
     width: 100%;
     height: 400px;
+    aspect-ratio: 16 / 9;
 }
 
 .article-content-container .context-container .context p{
@@ -184,4 +186,35 @@ header nav a:hover{
 }
 .article-content-container .context-container .third-container img{
     height: 90%;
+}
+
+
+@media (max-width:1024px){
+    .article-header-container .title-container{
+        padding: 20px;
+    }
+    .article-header-container .title-container{
+        top: 250px;
+    }
+}
+
+@media (max-width:768px){
+    .article-header-container .title-container h1{
+        font-size: 2rem;
+    }
+
+    .article-content-container{
+        width: 90%;
+        margin: auto;
+    }
+
+    .article-content-container .context-container img {
+ 
+        height: 200px;
+   
+    }
+
+    .article-content-container .context-container{
+        padding: 30px ;
+    }
 }

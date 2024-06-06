@@ -1,21 +1,11 @@
 const header = document.querySelector('header');
-const logo = document.querySelector('header img');
+const logo = document.querySelector('header .logo');
 const homeNav = document.getElementById('home-nav');
 const martinVilleHomesUnitB = document.getElementById('martin-ville-homes-unit-b');
 const martinVilleOpenHouseUnitB = document.getElementById('matin-ville-open-house-unit-b');
 const seeAllNewsAndEvents = document.getElementById('see-all');
 const anvayaCove = document.getElementById('anvaya-cove');
 const fraserPlace = document.getElementById('fraser-place');
-const sideNav = document.getElementById('side-nav');
-
-
-function openSideNav (){
-    sideNav.style.display = 'flex';
-}
-
-function closeSideNav(){
-    sideNav.style.display = 'none';
-}
 
 
 logo.addEventListener('click', function(){

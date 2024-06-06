@@ -40,6 +40,7 @@
     font-family: 'Gordita', sans-serif;
     font-weight: normal;
     font-style: normal;
+  
     
 }
 
@@ -267,7 +268,6 @@ section{
 
 .second-container .right-container .content-container .item{
     min-width: 500px;
-    
     height: 100%;
     margin-right: 10px;
     background-repeat: no-repeat;
@@ -435,7 +435,6 @@ section{
 
 .third-container{
     width: 100%;
-
     padding: 20px 100px;
     display: flex;
     flex-direction: column;
@@ -576,7 +575,7 @@ section{
 
 footer{
     height: 400px;
-    background-color: black;
+    background: linear-gradient(to right, #4E7AA8, #042455, #000F22);
     display: flex;
     flex-direction: column;
     padding: 20px 100px;
@@ -585,7 +584,7 @@ footer{
     width: 100%;
     height: 25%;
     color: white;
-    background-color: black;
+    
     display: flex;
     justify-content: center;
     align-items: center;
@@ -777,6 +776,305 @@ footer{
 }
 
 
+
+
+
+
+/*  New image slider*/
+
+.right-container {
+    max-width: 600px;
+    width: 100%;
+    position: relative;
+    overflow: hidden;
+  
+  }
+  .right-container i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .right-container i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .right-container i:first-child{
+    left: 15px;
+    z-index:99;
+  }
+  .right-container i:last-child{
+    right: 15px;
+    z-index: 99;
+  }
+  .right-container .carousel{
+    display: flex;
+    width: 100%;
+    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel.no-transition {
+    scroll-behavior: auto;
+  }
+  .carousel.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel .card {
+    scroll-snap-align: start;
+    min-width: 500px;
+    height: 600px;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+  
+    flex-direction: column;
+    border-radius: 8px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    
+    
+  }
+  .carousel .card .img {
+    background: #8B53FF;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+  }
+  .card .img img {
+    width: 100%;
+    height: 100%;
+  
+    object-fit: cover;
+    border: 4px solid #fff;
+  }
+  .carousel .card h2 {
+    font-weight: 500;
+    font-size: 1.56rem;
+    margin: 30px 0 5px;
+  }
+  .carousel .card span {
+    color: #6A6D78;
+    font-size: 1.31rem;
+  }
+  
+
+  
+  .carousel .card .details-container{
+    position: absolute;
+    bottom: 50px;
+    left: 30px;
+    color: white;
+  }
+  
+  .carousel .card .image-container{
+    background-image: url(../img/MVUNITB.jpeg);
+    width: 100%;
+    height: 100%;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    transition: filter .5s ease-in-out;
+  }
+
+  .carousel .anvaya-cove-card .image-container{
+    background-image: url(../img/ANVAYACOVE-KITCHEN-AREA.jpg);
+  }
+  .carousel .fraser-place-card .image-container{
+    background-image: url(../img/FRASERPLACE_BEDROOM.jpg);
+
+  }
+  
+  .carousel .card .hover-details-container{
+    position: absolute;
+    bottom: 50px;
+    width: 100%;
+    left: 30px;
+    display: none;
+    color: white;
+  }
+  
+  .carousel .card .hover-details-container p{
+    margin-bottom: 30px;
+  }
+  
+  .carousel .card:hover .hover-details-container{
+    display: flex;
+    flex-direction: column;
+    animation: slideUp 1s ease-in-out;
+  
+  }
+
+  .carousel .card:hover .hover-details-container .price-container  svg{
+    transition: transform .5s ease-in-out;
+  }
+
+  .carousel .card:hover .hover-details-container .price-container:hover svg{
+    transform: translateX(10px);
+   
+  }
+
+  .carousel .card:hover .hover-details-container .price-container:hover{
+    color: var(--primar-text-color);
+  } 
+
+  .carousel .card:hover .hover-details-container .price-container:hover svg path{
+    fill: var(--primar-text-color);
+  }
+  
+  .carousel .card:hover .image-container{
+    filter: brightness(.3);
+  }
+  
+  .carousel .card:hover .details-container{
+    display: none;
+  }
+  
+  .carousel .card .hover-details-container .price-container{
+    display: flex;
+    align-items: center;
+  }
+  
+
+
+  /* Image slide for news and Events*/
+
+  .wrapper-news {
+    height: auto;
+    width: 100%;
+    position: relative;
+    margin-top: 50px;
+  }
+  .wrapper-news i {
+    top: 50%;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    position: absolute;
+    text-align: center;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 50%;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.23);
+    transform: translateY(-50%);
+    transition: transform 0.1s linear;
+  }
+  .wrapper-news i:active{
+    transform: translateY(-50%) scale(0.85);
+  }
+  .wrapper-news i:first-child{
+    left: -22px;
+  }
+  .wrapper-news i:last-child{
+    right: -22px;
+  }
+  .wrapper-news .carousel-news{
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 16px;
+    scroll-behavior: smooth;
+    scrollbar-width: none;
+  }
+  .carousel-news::-webkit-scrollbar {
+    display: none;
+  }
+  .carousel-news.no-transition {
+    scroll-behavior: smooth;
+  }
+  .carousel-news.dragging {
+    scroll-snap-type: none;
+    scroll-behavior: auto;
+  }
+  .carousel-news.dragging .card {
+    cursor: grab;
+    user-select: none;
+  }
+  .carousel-news :where(.card, .img) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-news .card-news {
+    scroll-snap-align: start;
+    height: auto;
+    list-style: none;
+    background: #fff;
+    cursor: pointer;
+    padding-bottom: 15px;
+    flex-direction: column;
+    border-radius: 8px;
+    min-width: 350px;
+ 
+  }
+
+  .carousel-news .card-news a{
+    text-decoration: none;
+    color: black;
+  }
+  
+  
+  .card-news .image-container-news{
+      width: 100%;
+      height: 250px;
+      aspect-ratio: 4 / 3;
+      margin-bottom: 20px;
+  }
+  
+  .card-news .image-container-news img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+  }
+
+  .card-news .details-container h3{
+    margin-bottom: 20px;
+  }
+
+  .card-news .details-container h4{
+    color: gray;
+  }
+  @keyframes slideUp{
+    0%{
+      opacity: 0;
+      transform: translateY(100%);
+    }
+    100%{
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+
 @media (max-width:1024px) {
     /*First Container*/
     .first-sub-container{
@@ -819,6 +1117,7 @@ footer{
     .second-container{
         padding: 50px 20px;
         flex-direction: column;
+        gap: 0;
     }
 
     #destination-description{
@@ -857,7 +1156,8 @@ footer{
         font-size: 1rem;
         margin-bottom: 80px;
     }
-    
+
+   
     
 
     /*Footer Container*/
@@ -877,11 +1177,21 @@ footer{
     }
 
     .left-container{
-        height: 50%;
+        height: 30%;
     }
     .right-container{
-        height: 50%;
+        height: 60%;
     }
+
+    .right-container .carousel .card{
+        height: 100%;
+    }
+
+    .carousel .card{
+        min-width: 100%;
+    }
+
+ 
 }  
 
 @media (max-width:640px) {
@@ -890,4 +1200,7 @@ footer{
     }
   
 }
+
+
+
 
