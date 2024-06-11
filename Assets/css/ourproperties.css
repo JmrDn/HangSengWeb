@@ -311,6 +311,10 @@ body::-webkit-scrollbar {
     visibility: visible;
  }
 
+ 
+
+ 
+
  .item .lot-and-floor .lot-area-container .tool-tip-text{
     color: white;
     background-color: black;
@@ -643,6 +647,7 @@ body::-webkit-scrollbar {
  
  }
  
+ 
  .selected-item-container .main-item-container .item-container .unit .lot-and-floor .lot-area-container,
   .selected-item-container .main-item-container .item-container .unit .lot-and-floor .floor-area-container{
      display: flex;
@@ -663,6 +668,7 @@ body::-webkit-scrollbar {
     display: none;
     width: 140px;
   }
+
 
   @media (max-width:1024px) {
 
@@ -781,6 +787,22 @@ body::-webkit-scrollbar {
     }
   
     .item .lot-and-floor .floor-area-container{margin-left: 0; }
+}
+
+
+.martinville-promo::after{
+    content: "P6,400,000";
+    color: black;
+    font-size: 1rem;
+    text-decoration: line-through 1.5px red;
+    margin-left: 10px;
+}
+
+.martinville-promo::before{
+    content: "Promo:";
+    color: #000;
+    font-size: 1rem;
+    margin-right: 5px;    
 }
 
 

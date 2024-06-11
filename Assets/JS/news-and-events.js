@@ -78,4 +78,6 @@ document.querySelector('.item21').addEventListener('click', function(){
 document.querySelector('.item23').addEventListener('click', function(){
     window.location.href ="../../Modules/News and Events/Contents/vaccination-for-workers.html";
 });
-
+document.querySelector('.item24').addEventListener('click', function(){
+    window.open("https://enjoyingwonderfulworld.blogspot.com/2012/01/azkals-alyansa-madrid-team-all-set-for.html");
+});

@@ -882,10 +882,30 @@ body::-webkit-scrollbar {
         
      }
   
-  
 
-   
-}  
+}
+
+.martinville-promo::after,
+.martinville-promo-selected::after{
+    content: "P6,400,000";
+    color: black;
+    font-size: 1rem;
+    text-decoration: line-through 1.5px red;
+    margin-left: 10px;
+}
+
+.martinville-promo::before, 
+.martinville-promo-selected::before{
+    content: "Promo:";
+    color: #000;
+    font-size: 2rem;
+    margin-right: 5px;    
+}
+
+
+.martinville-promo-selected::before{
+    font-size: 1rem;
+}
 
 
 
