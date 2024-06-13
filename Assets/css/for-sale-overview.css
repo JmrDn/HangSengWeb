@@ -252,11 +252,11 @@ body::-webkit-scrollbar {
     margin-top: 20px;
 
 }
-.details-container :where(.features, .amenities, .property-details) {
+.details-container :where(.features, .amenities, .property-details, .brochure) {
    
     margin-top: 20px;
 }
-.details-container :where(.features h1, .property-details h1){
+.details-container :where(.features h1, .property-details h1, .brochure h1, .amenities h1){
     color: var(--primary-color);
     font-weight: 700;
 }
@@ -269,14 +269,17 @@ body::-webkit-scrollbar {
     font-size: 1.3rem;
 }
 
-
-
-.details-container .amenities h1{
-    color: var(--primary-color);
-    font-weight: 700;
-    
+.details-container .brochure img{
+    width: 100%;
+    height: 400px;
+    cursor: pointer;
+    filter: drop-shadow(-1px 6px 7px #878787);
 }
 
+.details-container .brochure-line,
+.details-container .brochure{
+    display: none;
+}
 .details-container .amenities p{
   
     text-align: start;
@@ -314,7 +317,7 @@ body::-webkit-scrollbar {
     width: auto;
     padding: 20px 0px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(400px, 400px));
+    grid-template-columns: repeat(auto-fit, minmax(auto, 400px));
     grid-template-rows: repeat(auto-fit, minmax(400px, 1fr ));
     gap: 30px;
     justify-content: center;
@@ -323,7 +326,7 @@ body::-webkit-scrollbar {
 }
 
 .item{
-    height: 460px;
+    height: auto;
     background-color: white;
     position: relative;
     box-shadow: -1px -1px  3px rgba(0, 0, 0, 0.2),
@@ -378,12 +381,12 @@ body::-webkit-scrollbar {
 .item .content-container{
     padding: 10px 20px;
     position: relative;
-    height: 50%;
+    height: auto;
 }
 
 .item .img-container{
     overflow: hidden;
-    height: 50%;
+    height: 250px;
 }
 .item img{
     width: 100%;
@@ -424,9 +427,13 @@ body::-webkit-scrollbar {
 
 .property-price {
     display: flex;
-    justify-content: st;
+    justify-content: start;
     margin-top: 10px;
     font-weight: 500;
+    height: auto;
+    width: 100%;
+    flex-direction: column;
+  
   
 }
 
@@ -471,7 +478,11 @@ body::-webkit-scrollbar {
  .item .lot-and-floor{
     display: flex;
     align-items: start;
+    flex-wrap: wrap;
+
    margin-top: -10px;
+   column-gap: 15px;
+  
 
 }
 
@@ -481,9 +492,6 @@ body::-webkit-scrollbar {
     align-items: center;
  } 
 
- .item .lot-and-floor .floor-area-container{
-    margin-left: 20px;
- }
 
  .item .lot-and-floor .lot-area-container p,
  .item .lot-and-floor .floor-area-container p{
@@ -518,6 +526,8 @@ body::-webkit-scrollbar {
     .features-and-lot-floor-area > *{
         margin-right: 20px;
     }  
+
+   
 
 }
 
@@ -607,7 +617,7 @@ body::-webkit-scrollbar {
 
 
  .selected-item-container .main-item-container .item-container .unit{
-    height: 470px;
+    height: auto;
     background-color: white;
     position: relative;
     box-shadow: -1px -1px  3px rgba(0, 0, 0, 0.2),
@@ -779,6 +789,36 @@ body::-webkit-scrollbar {
     width: 140px;
   }
 
+
+
+.martinville-promo::after,
+.martinville-promo-selected::after{
+    content: "P6,400,000";
+    color: black;
+    font-size: 1rem;
+    text-decoration: line-through 1.5px red;
+    margin-left: 10px;
+    white-space: nowrap; /* Prevents text wrapping */
+    display: inline-block; /* Ensures it's treated as an inline block element */
+    vertical-align: middle; /* Aligns vertically in the middle */
+    overflow: hidden; /* Ensures no overflow */
+    text-overflow: ellipsis; /* Adds ellipsis if text overflows */
+}
+
+.martinville-promo::before, 
+.martinville-promo-selected::before{
+    content: "Promo:";
+    color: #000;
+    font-size: 2rem;
+    margin-right: 5px;    
+}
+
+
+.martinville-promo-selected::before{
+    font-size: 1rem;
+}
+
+
   @media (max-width:1024px) {
 
     section{
@@ -794,12 +834,12 @@ body::-webkit-scrollbar {
         padding: 0 20px;
      
     }
-    .list-of-properties-container{
+    .other-properties-container .list-of-properties-container{
        width: 100%;
-       grid-template-columns: repeat(auto-fit, minmax(300px,  400px ));
+       grid-template-columns: repeat(auto-fit, minmax(350px,  400px));
        
     }
-  
+    
     p{
         font-size: 1rem;
     }
@@ -848,11 +888,9 @@ body::-webkit-scrollbar {
 
      .selected-item-container .main-item-container .item-container{
      
-        grid-template-columns: repeat(auto-fit, minmax(300px,  400px ));
+        grid-template-columns: repeat(auto-fit, minmax(300px,  300px ));
         margin: 10px;
         padding: 10px;
-       
-      
     
      }
 
@@ -882,30 +920,15 @@ body::-webkit-scrollbar {
         
      }
   
-
 }
 
-.martinville-promo::after,
-.martinville-promo-selected::after{
-    content: "P6,400,000";
-    color: black;
-    font-size: 1rem;
-    text-decoration: line-through 1.5px red;
-    margin-left: 10px;
+@media (max-width:450px){
+    .martinville-promo::after,
+    .martinville-promo-selected::after{
+        margin-left: 0;
+    }
 }
 
-.martinville-promo::before, 
-.martinville-promo-selected::before{
-    content: "Promo:";
-    color: #000;
-    font-size: 2rem;
-    margin-right: 5px;    
-}
-
-
-.martinville-promo-selected::before{
-    font-size: 1rem;
-}
 
 
 

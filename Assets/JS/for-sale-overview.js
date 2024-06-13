@@ -48,30 +48,77 @@ backBtn.forEach(backBtn => {
     });
 });
 
-martinville.addEventListener('click', function(){
+if (martinville != null){
+    martinville.addEventListener('click', function(){
 
-    showItemSelected("martinville");
+        showItemSelected("martinville");
+        
     
+    });
+}
 
-});
+const martinVilleUnitA = document.querySelector('#martinville-homes-unita');
+const martinVilleUnitB = document.querySelector('#martinville-homes-unitb');
+const martinVilleUnitC = document.querySelector('#martinville-homes-unitc');
 
-document.querySelector('#martinville-homes-unita').addEventListener('click',function(){
+if (martinVilleUnitA != null){
+    martinVilleUnitA.addEventListener('click',function(){
  
-    localStorage.setItem('property-name', 'Unit A');
-    window.location.href ="../../Our properties/For Sale/martinvillehomes.html";
-});
+        localStorage.setItem('property-name', 'Unit A');
+        localStorage.setItem('isBrochure', 'false');
+        window.location.href ="../../Our properties/For Sale/martinvillehomes.html";
+    });
+    
+}
 
-document.querySelector('#martinville-homes-unitb').addEventListener('click',function(){
+if (martinVilleUnitB != null){
+    martinVilleUnitB.addEventListener('click',function(){
  
-    localStorage.setItem('property-name', 'Unit B');
-    window.location.href ="../../Our properties/For Sale/martinvillehomes.html";
-});
+        localStorage.setItem('property-name', 'Unit B');
+        localStorage.setItem('isBrochure', 'true');
+        window.location.href ="../../Our properties/For Sale/martinvillehomes.html";
+    });
+}
 
-document.querySelector('#martinville-homes-unitc').addEventListener('click',function(){
+if (martinVilleUnitC != null){
+    martinVilleUnitC.addEventListener('click',function(){
  
-    localStorage.setItem('property-name', 'Unit C');
-    window.location.href ="../../Our properties/For Sale/martinvillehomes.html";
-});
+        localStorage.setItem('property-name', 'Unit C');
+        localStorage.setItem('isBrochure', 'false');
+        window.location.href ="../../Our properties/For Sale/martinvillehomes.html";
+    });
+}
+
+const isBrochure = localStorage.getItem('isBrochure');
+const brochure = document.querySelector('.details-container .brochure');
+const brochureLine = document.querySelector('.details-container .brochure-line');
+
+console.log(isBrochure);
+
+
+function displayBrochure (){
+    brochure.style.display = 'flex';
+    brochure.style.flexDirection = 'column';
+    brochureLine.style.display = 'flex';
+
+}
+
+function hideBrochure (){   
+    brochure.style.display = 'none';
+    brochureLine.style.display = 'none';
+}
+
+if (isBrochure === 'true'){
+    displayBrochure();
+}
+else if (isBrochure === 'false'){
+    hideBrochure();
+}
+else if (isBrochure === null){
+    hideBrochure();
+}
+
+
 
 
 

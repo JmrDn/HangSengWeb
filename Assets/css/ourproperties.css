@@ -703,13 +703,11 @@ body::-webkit-scrollbar {
         justify-content: space-between;      
      }
 
-     .main-container .panel-title-container .btn-group{
+    .main-container .panel-title-container .btn-group{
         margin-left: auto;
         display: flex;
      }
 
-   
-   
      .main-container .panel-title-container .btn-group .btn{
         background-color: var(--primary-color);
      }

@@ -158,26 +158,31 @@ sumakwelHomes.addEventListener('click', function(){
 document.querySelector('#martinville-homes-unita').addEventListener('click',function(){
  
     localStorage.setItem('property-name', 'Unit A');
+    localStorage.setItem('isBrochure', 'false');
     window.location.href ="../../Modules/Our properties/For Sale/martinvillehomes.html";
 });
 
 document.querySelector('#martinville-homes-unitb').addEventListener('click',function(){
  
     localStorage.setItem('property-name', 'Unit B');
+    localStorage.setItem('isBrochure', 'true');
     window.location.href ="../../Modules/Our properties/For Sale/martinvillehomes.html";
 });
 
 document.querySelector('#martinville-homes-unitc').addEventListener('click',function(){
  
     localStorage.setItem('property-name', 'Unit C');
+    localStorage.setItem('isBrochure', 'false');
     window.location.href ="../../Modules/Our properties/For Sale/martinvillehomes.html";
 });
 
 document.querySelector("#anvaya-cove").addEventListener("click", function(){
+    localStorage.setItem('isBrochure', 'false');
     window.location.href="../../Modules/Our properties/For Sale/anvaya-cove.html";
 });
 
 document.querySelector("#fraser-place").addEventListener("click", function(){
+    localStorage.setItem('isBrochure', 'false');
     window.location.href="../../Modules/Our properties/For Sale/fraser-place.html";
 });
 
