@@ -61,7 +61,7 @@ header{
     transition: background .5s ease-in-out;
 }
 
-header img{
+header .logo img{
     width: 70px;
     height: 50px;
     cursor: pointer;
@@ -96,24 +96,28 @@ header nav a:hover{
     
 }
 
-
- header .logo{
+header .logo {
+    height: auto;
     display: flex;
     align-items: center;
     cursor: pointer;
+    gap: 10px;
+}
 
-
+header .logo a {
+    display: flex;
+    align-items: center; /* Ensure the link itself aligns its content */
+    text-decoration: none;
 }
 
 
-header .logo .logo-name{
+
+header .logo .logo-name {
     font-weight: 500;
     color: white;
     font-size: 1.5rem;
-    margin-left: 10px;
-    display: flex;
-    text-align: start;
-
+    padding: 0;
+    margin: 0;
 }
 .navigation-active {
     padding-top:25px ;

@@ -111,6 +111,7 @@ h1{
 .header-title h1{
     font-size: 5rem;
     font-weight: bold;
+    text-align: start;
 }
 .header-title p{
     font-size: 1.3rem;
@@ -352,6 +353,7 @@ h1{
     gap: 20px;
     margin-bottom: 50px;
 
+
 }
 
 .card .image-container{
@@ -360,7 +362,7 @@ h1{
     flex-basis: 40%;
     border-radius: 50%;
     overflow: hidden;
-
+   
 }
 
 

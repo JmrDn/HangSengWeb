@@ -209,6 +209,27 @@ body::-webkit-scrollbar {
     font-size: 1rem;
 }
 
+.checkbox{
+    display: flex;
+    gap: 15px;
+    margin: 10px 0;
+
+}
+
+.checkbox input{
+    width: 24px;
+    height: 24px;
+}
+
+.checkbox p{
+    text-align: start;
+}
+
+.checkbox p a{
+    text-decoration: none;
+    color: var(--primar-text-color);
+}
+
 
 
 footer{

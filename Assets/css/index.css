@@ -154,8 +154,7 @@ section{
     
 }
 
-.second-container{
-    
+.second-container{ 
     display: flex;
     padding: 50px 100px;
     opacity: 1;
@@ -164,16 +163,17 @@ section{
     gap: 20px;
     background-color: white;
     position: relative;
-
 }
 
-.left-container{
+
+
+ .left-container{
     flex-basis: 50%;
     max-height: 800px;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-  
+    height: auto;
 
 
 }
@@ -192,6 +192,7 @@ section{
     margin-top: 30px;
     transition:  font-size .5s ease-in;
     text-align: start;
+    height: auto;
 }
 
 #destination-description{
@@ -213,20 +214,20 @@ section{
    
 }
 
-.second-container .left-container .discover-more-container i{
+.second-container  .left-container .discover-more-container i{
     font-size: 1.5rem;
     margin: 0px 10px;
     color: gray;
     transition: transform .5s ease-in-out;
 }
 
-.second-container .left-container .discover-more-container:hover h3 a{
+.second-container  .left-container .discover-more-container:hover h3 a{
     text-decoration: none;
     color: gray;
  
 }
 
-.second-container .left-container .discover-more-container:hover i{
+.second-container  .left-container .discover-more-container:hover i{
     transform: translateX(10px);
 }
 
@@ -235,13 +236,13 @@ section{
     text-decoration: none;
 }
 
-.second-container .left-container .discover-more-container:hover #destination-more-info,
-.second-container .left-container .discover-more-container:hover i{
+.second-container  .left-container .discover-more-container:hover #destination-more-info,
+.second-container  .left-container .discover-more-container:hover i{
     color: black;
 }
 
 
-.second-container .right-container{
+.second-container  .right-container{
     
     flex-basis: 50%;
     overflow: hidden;
@@ -266,7 +267,7 @@ section{
 }   
 
 
-.second-container .right-container .content-container .item{
+.second-container  .right-container .content-container .item{
     min-width: 500px;
     height: 100%;
     margin-right: 10px;
@@ -324,19 +325,19 @@ section{
 
 
 
-.second-container .right-container .content-container .item:hover .image-container{
+.second-container  .right-container .content-container .item:hover .image-container{
     filter: brightness(.3);
 }
 
-.second-container .right-container .content-container .item:hover .content{
+.second-container  .right-container .content-container .item:hover .content{
     width: 100%;
 }
 
-.second-container .right-container .content-container .item:hover .content .details-container{
+.second-container  .right-container .content-container .item:hover .content .details-container{
     display: none;
 }
 
-.second-container .right-container .content-container .item .content .hover-details-container{
+.second-container  .right-container .content-container .item .content .hover-details-container{
     width: 100%;
     position: absolute;
     bottom: 50px;
@@ -1117,7 +1118,7 @@ footer{
     .second-container{
         padding: 50px 20px;
         flex-direction: column;
-        gap: 0;
+        gap: 20px;  
     }
 
     #destination-description{
