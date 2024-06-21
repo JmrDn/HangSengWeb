@@ -51,7 +51,8 @@
 
           
         </div>
-        <form>
+        <form action="submit_contact.php" method="post" id="contactForm">
+            <div id="responseMessage" class="alert alert-success" style="display:none;"></div>
             <h1>Let's Talk</h1>
             <div class="input-box">
                 <h4>Name</h4>
@@ -86,7 +87,7 @@
             </div>
 
             <div class="checkbox">
-                <input type="checkbox">
+                <input type="checkbox" id="checkbox">
                 <p>I have read and agree to our <a href="../Privacy Notice and Terms and Condition/terms-and-condition.html">Terms and Conditions</a> and <a href="../Privacy Notice and Terms and Condition/privacy-notice.html">Privacy Notice</a>.</p>
             </div>
             <button>Submit</button>
@@ -155,6 +156,68 @@
 </footer>
 
 <script src="../../Assets/JS/navigation.js"></script>
+<script src="../../Assets/JS/contactus.js"></script>
+<script src="../../Assets/JS/index.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        var form = document.getElementById('contactForm');
+        if (!form) {
+            console.error('Form with id "contactForm" not found.');
+            return;
+        }
+    
+        form.addEventListener('submit', function (event) {
+            event.preventDefault(); // Stop the form from submitting the traditional way
+    
+            // Show loading message immediately
+            var responseContainer = document.getElementById('responseMessage');
+            if (responseContainer) {
+                responseContainer.style.display = 'block';
+                responseContainer.textContent = 'Sending your message...';
+            }
+    
+            var formData = new FormData(form);
+            var xhr = new XMLHttpRequest();
+            xhr.open('POST', form.action, true);
+    
+            xhr.onload = function () {
+                if (xhr.status >= 200 && xhr.status < 300) {
+                    if (!responseContainer) {
+                        console.error('Element with id "responseMessage" not found.');
+                        return;
+                    }
+                    responseContainer.style.display = 'block';
+                    responseContainer.textContent = 'Thank you for your inquiry, your message has been sent! Please wait 24 hours for the response';
+                    form.reset(); // Reset form after successful submission
+                } else {
+                    console.error('The request failed with status: ' + xhr.status);
+                    responseContainer.style.display = 'block';
+                    responseContainer.textContent = 'There was an error with your submission. Please try again later.';
+                }
+            };
+    
+            xhr.onerror = function () {
+                console.error('The request encountered an error.');
+                if (responseContainer) {
+                    responseContainer.style.display = 'block';
+                    responseContainer.textContent = 'There was an error with your submission. Please try again later.';
+                }
+            };
+    
+            // Set a timeout for the request
+            xhr.timeout = 3000; // Timeout after 5 seconds
+            xhr.ontimeout = function () {
+                console.error('The request timed out.');
+                if (responseContainer) {
+                    responseContainer.style.display = 'block';
+                    responseContainer.textContent = 'The request timed out. Please try again later.';
+                }
+            };
+    
+            xhr.send(formData);
+        });
+    });
+</script>
 
 </body>
 </html>

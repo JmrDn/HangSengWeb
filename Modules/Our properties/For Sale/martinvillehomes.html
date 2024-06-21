@@ -196,7 +196,8 @@
 
       <div class="form-container">
         <h5>Ask about properties</h5>
-        <form action="#" class="form">
+        <div id="responseMessage" class="alert alert-success" style="display:none;"></div>
+        <form id="contactForm" action="request_details.php" method="post">
           <div class="input-box">
             <input type="text" placeholder="Your name" />
           </div>
@@ -217,7 +218,8 @@
             <input type="checkbox">
             <p>I have read and agree to our <a
                 href="../Privacy Notice and Terms and Condition/terms-and-condition.html">Terms and Conditions</a> and
-              <a href="../Privacy Notice and Terms and Condition/privacy-notice.html">Privacy Notice</a>.</p>
+              <a href="../Privacy Notice and Terms and Condition/privacy-notice.html">Privacy Notice</a>.
+            </p>
           </div>
           <button id="request-button">Request Details</button>
         </form>
@@ -367,7 +369,66 @@
     </div>
 
   </div>
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var form = document.getElementById('contactForm');
+      if (!form) {
+        console.error('Form with id "contactForm" not found.');
+        return;
+      }
 
+      form.addEventListener('submit', function (event) {
+        event.preventDefault(); // Stop the form from submitting the traditional way
+
+        // Show loading message immediately
+        var responseContainer = document.getElementById('responseMessage');
+        if (responseContainer) {
+          responseContainer.style.display = 'block';
+          responseContainer.textContent = 'Sending your message...';
+        }
+
+        var formData = new FormData(form);
+        var xhr = new XMLHttpRequest();
+        xhr.open('POST', form.action, true);
+
+        xhr.onload = function () {
+          if (xhr.status >= 200 && xhr.status < 300) {
+            if (responseContainer) {
+              responseContainer.style.display = 'block';
+              responseContainer.textContent = 'Thank you for your inquiry, we will get back to you soon! Email has been sent';
+              form.reset(); // Reset form after successful submission
+            }
+          } else {
+            console.error('The request failed!');
+            if (responseContainer) {
+              responseContainer.style.display = 'block';
+              responseContainer.textContent = 'There was an error with your submission. Please try again later.';
+            }
+          }
+        };
+
+        xhr.onerror = function () {
+          console.error('The request failed!');
+          if (responseContainer) {
+            responseContainer.style.display = 'block';
+            responseContainer.textContent = 'There was an error with your submission. Please try again later.';
+          }
+        };
+
+        // Set a timeout for the request
+        xhr.timeout = 3000; // Timeout after 5 seconds
+        xhr.ontimeout = function () {
+          console.error('The request timed out.');
+          if (responseContainer) {
+            responseContainer.style.display = 'block';
+            responseContainer.textContent = 'The request timed out. Please try again later.';
+          }
+        };
+
+        xhr.send(formData);
+      });
+    });
+  </script>
   <script src="../../../Assets/JS/martin-ville-properties.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
     integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
@@ -377,6 +438,7 @@
     crossorigin="anonymous"></script>
   <script src="../../../Assets/JS/navigation.js"></script>
   <script src="../../../Assets/JS/for-sale-overview.js"></script>
+
 </body>
 
 </html>
